@@ -1,0 +1,40 @@
+{
+  "title": "满足您轮播创建需求的套餐",
+  "subtitle": "从个人创作者到机构，我们都有适合您需求的套餐。",
+  "billing": {
+    "monthly": "月付",
+    "yearly": "年付",
+    "discount": "年度订阅享30%折扣！- ANNUAL30OFF"
+  },
+  "free_plan": {
+    "name": "免费套餐",
+    "price": "$0",
+    "period": "/月"
+  },
+  "starter_plan": {
+    "name": "入门套餐",
+    "price": "$10",
+    "period": "/月",
+    "tag": "适合初次使用"
+  },
+  "solopreneur_plan": {
+    "name": "个人创业套餐",
+    "price": "$10",
+    "period": "/月",
+    "original_price": "$20",
+    "tag": "适合个人创作者",
+    "yearly_savings": "每年节省$120"
+  },
+  "team_plan": {
+    "name": "团队套餐",
+    "price": "$25",
+    "period": "/月",
+    "original_price": "$50",
+    "tag": "适合小型团队",
+    "yearly_savings": "每年节省$300"
+  },
+  "disclaimers": {
+    "taxes": "* 所有价格均需缴纳适用税费。",
+    "addons": "如果您需要额外的限额，可以将其作为附加服务添加到您的订阅中。"
+  }
+} 

@@ -1,0 +1,20 @@
+{
+  "languages": {
+    "en": "Inglés",
+    "es": "Español",
+    "fr": "Francés",
+    "zh": "Chino"
+  },
+  "buttons": {
+    "get_started": "Comenzar",
+    "create_carousel": "Crear Carrusel",
+    "create_image_post": "Crear Publicación",
+    "start_creating": "Comienza a Crear Carruseles Gratis"
+  },
+  "labels": {
+    "beta": "BETA",
+    "no_credit_card": "No Requiere Tarjeta de Crédito | Descargas Gratuitas Cada Mes",
+    "join_creators": "Únete a +32,000 Creadores",
+    "embedded_platforms": "Integrado en +40 Plataformas SMM"
+  }
+} 

@@ -1,0 +1,26 @@
+{
+  "getting_started": {
+    "title": "入门指南",
+    "docs": "文档",
+    "blog": "博客",
+    "affiliates": "推广联盟"
+  },
+  "products": {
+    "title": "产品",
+    "linkedin_carousel": "LinkedIn轮播",
+    "instagram_carousel": "Instagram轮播",
+    "tiktok_carousel": "TikTok轮播",
+    "twitter_carousel": "Twitter轮播",
+    "embed": "嵌入",
+    "extension": "扩展"
+  },
+  "free_tools": {
+    "title": "免费工具",
+    "twitter_banner": "Twitter横幅制作器",
+    "linkedin_banner": "LinkedIn横幅制作器",
+    "instagram_grid": "Instagram网格制作器",
+    "linkedin_formatter": "LinkedIn文本格式化器",
+    "linkedin_generator": "LinkedIn帖子生成器"
+  },
+  "plans": "套餐"
+} 

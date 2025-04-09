@@ -1,0 +1,40 @@
+{
+  "title": "Planes para tus Necesidades de Creación de Carruseles",
+  "subtitle": "Desde creadores individuales hasta agencias, tenemos un plan que se adapta a tus requisitos.",
+  "billing": {
+    "monthly": "Mensual",
+    "yearly": "Anual",
+    "discount": "¡30% DE DESCUENTO EN SUSCRIPCIÓN ANUAL! - ANNUAL30OFF"
+  },
+  "free_plan": {
+    "name": "PLAN GRATUITO",
+    "price": "$0",
+    "period": "/mes"
+  },
+  "starter_plan": {
+    "name": "PLAN INICIAL",
+    "price": "$10",
+    "period": "/mes",
+    "tag": "Perfecto para comenzar"
+  },
+  "solopreneur_plan": {
+    "name": "PLAN EMPRENDEDOR",
+    "price": "$10",
+    "period": "/mes",
+    "original_price": "$20",
+    "tag": "Perfecto para creadores individuales",
+    "yearly_savings": "Ahorras $120 al año"
+  },
+  "team_plan": {
+    "name": "PLAN PARA EQUIPOS",
+    "price": "$25",
+    "period": "/mes",
+    "original_price": "$50",
+    "tag": "Perfecto para equipos pequeños",
+    "yearly_savings": "Ahorras $300 al año"
+  },
+  "disclaimers": {
+    "taxes": "* Todos los precios están sujetos a impuestos aplicables.",
+    "addons": "Si necesitas límites adicionales, puedes agregarlos como complementos a tu suscripción."
+  }
+} 

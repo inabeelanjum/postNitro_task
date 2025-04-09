@@ -1,0 +1,26 @@
+{
+  "getting_started": {
+    "title": "Getting Started",
+    "docs": "Docs",
+    "blog": "Blog",
+    "affiliates": "Affiliates"
+  },
+  "products": {
+    "title": "Products",
+    "linkedin_carousel": "LinkedIn Carousel",
+    "instagram_carousel": "Instagram Carousel",
+    "tiktok_carousel": "TikTok Carousel",
+    "twitter_carousel": "Twitter Carousel",
+    "embed": "Embed",
+    "extension": "Extension"
+  },
+  "free_tools": {
+    "title": "Free Tools",
+    "twitter_banner": "Twitter Banner Maker",
+    "linkedin_banner": "LinkedIn Banner Maker",
+    "instagram_grid": "Instagram Grid Maker",
+    "linkedin_formatter": "LinkedIn Text Formatter",
+    "linkedin_generator": "LinkedIn Post Generator"
+  },
+  "plans": "Plans"
+} 

@@ -1,0 +1,20 @@
+{
+  "languages": {
+    "en": "English",
+    "es": "Spanish",
+    "fr": "French",
+    "zh": "Chinese"
+  },
+  "buttons": {
+    "get_started": "Get Started",
+    "create_carousel": "Create Carousel",
+    "create_image_post": "Create Image Post",
+    "start_creating": "Start Creating Free Carousels"
+  },
+  "labels": {
+    "beta": "BETA",
+    "no_credit_card": "No Credit Card Required | Free Downloads Every Month",
+    "join_creators": "Join 32,000+ Creators",
+    "embedded_platforms": "Embedded Into 40+ SMM Platforms"
+  }
+} 

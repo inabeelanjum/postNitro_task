@@ -1,0 +1,20 @@
+{
+  "languages": {
+    "en": "英语",
+    "es": "西班牙语",
+    "fr": "法语",
+    "zh": "中文"
+  },
+  "buttons": {
+    "get_started": "开始使用",
+    "create_carousel": "创建轮播",
+    "create_image_post": "创建图片帖子",
+    "start_creating": "开始免费创建轮播"
+  },
+  "labels": {
+    "beta": "测试版",
+    "no_credit_card": "无需信用卡 | 每月免费下载",
+    "join_creators": "加入32,000+创作者",
+    "embedded_platforms": "嵌入40+社交媒体平台"
+  }
+} 

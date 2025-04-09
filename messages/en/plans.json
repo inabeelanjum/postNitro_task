@@ -1,0 +1,40 @@
+{
+  "title": "Plans for Your Carousel Creation Needs",
+  "subtitle": "From solo creators to agencies, we have a plan that fits your requirements.",
+  "billing": {
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "discount": "30% OFF ON YEARLY SUBSCRIPTION! - ANNUAL30OFF"
+  },
+  "free_plan": {
+    "name": "FREE PLAN",
+    "price": "$0",
+    "period": "/month"
+  },
+  "starter_plan": {
+    "name": "STARTER PLAN",
+    "price": "$10",
+    "period": "/month",
+    "tag": "Perfect for getting started"
+  },
+  "solopreneur_plan": {
+    "name": "SOLOPRENEUR PLAN",
+    "price": "$10",
+    "period": "/month",
+    "original_price": "$20",
+    "tag": "Perfect for solo creators",
+    "yearly_savings": "Saves you $120 per year"
+  },
+  "team_plan": {
+    "name": "TEAM PLAN",
+    "price": "$25",
+    "period": "/month",
+    "original_price": "$50",
+    "tag": "Perfect for small teams",
+    "yearly_savings": "Saves you $300 per year"
+  },
+  "disclaimers": {
+    "taxes": "* All prices are subject to applicable taxes.",
+    "addons": "If you require additional limits, you can add them as Add-Ons to your subscription."
+  }
+} 

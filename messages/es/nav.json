@@ -1,0 +1,26 @@
+{
+  "getting_started": {
+    "title": "Cómo Empezar",
+    "docs": "Documentación",
+    "blog": "Blog",
+    "affiliates": "Afiliados"
+  },
+  "products": {
+    "title": "Productos",
+    "linkedin_carousel": "Carrusel LinkedIn",
+    "instagram_carousel": "Carrusel Instagram",
+    "tiktok_carousel": "Carrusel TikTok",
+    "twitter_carousel": "Carrusel Twitter",
+    "embed": "Incrustación",
+    "extension": "Extensión"
+  },
+  "free_tools": {
+    "title": "Herramientas Gratuitas",
+    "twitter_banner": "Creador de Banner para Twitter",
+    "linkedin_banner": "Creador de Banner para LinkedIn",
+    "instagram_grid": "Creador de Grilla para Instagram",
+    "linkedin_formatter": "Formateador de Texto para LinkedIn",
+    "linkedin_generator": "Generador de Publicaciones para LinkedIn"
+  },
+  "plans": "Planes"
+} 

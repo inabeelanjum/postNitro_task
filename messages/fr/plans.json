@@ -1,0 +1,40 @@
+{
+  "title": "Forfaits pour vos Besoins de Création de Carrousels",
+  "subtitle": "Des créateurs individuels aux agences, nous avons un forfait adapté à vos besoins.",
+  "billing": {
+    "monthly": "Mensuel",
+    "yearly": "Annuel",
+    "discount": "30% DE RÉDUCTION SUR L'ABONNEMENT ANNUEL ! - ANNUAL30OFF"
+  },
+  "free_plan": {
+    "name": "FORFAIT GRATUIT",
+    "price": "0 €",
+    "period": "/mois"
+  },
+  "starter_plan": {
+    "name": "FORFAIT DÉBUTANT",
+    "price": "10 €",
+    "period": "/mois",
+    "tag": "Parfait pour commencer"
+  },
+  "solopreneur_plan": {
+    "name": "FORFAIT SOLO",
+    "price": "10 €",
+    "period": "/mois",
+    "original_price": "20 €",
+    "tag": "Parfait pour les créateurs individuels",
+    "yearly_savings": "Économisez 120 € par an"
+  },
+  "team_plan": {
+    "name": "FORFAIT ÉQUIPE",
+    "price": "25 €",
+    "period": "/mois",
+    "original_price": "50 €",
+    "tag": "Parfait pour les petites équipes",
+    "yearly_savings": "Économisez 300 € par an"
+  },
+  "disclaimers": {
+    "taxes": "* Tous les prix sont soumis aux taxes applicables.",
+    "addons": "Si vous avez besoin de limites supplémentaires, vous pouvez les ajouter comme modules complémentaires à votre abonnement."
+  }
+} 
