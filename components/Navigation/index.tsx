@@ -48,41 +48,44 @@ const Navigation = () => {
     <header className={classes.header} role="banner">
       <Container size="fluid" className={classes.container}>
         <Group justify="space-between" align="center" className={classes.inner}>
-          {/* Left side with Logo */}
-          <Link href="/" className={classes.logoAnchor}>
-            <Logo />
-          </Link>
+          {/* Left side with Logo and Nav items */}
+          <Group spacing="xs">
+            {/* Logo */}
+            <Link href="/" className={classes.logoAnchor}>
+              <Logo />
+            </Link>
 
-          {/* Desktop Navigation (centered) */}
-          <Group className={classes.desktopNav} role="navigation" gap="sm">
-            {/* Getting Started Dropdown */}
-            <NavDropdown 
-              label={t('getting_started.title')} 
-              items={gettingStartedItems}
-            />
-            
-            {/* Products Dropdown */}
-            <NavDropdown 
-              label={t('products.title')} 
-              items={productsItems}
-            />
-            
-            {/* Free Tools Dropdown */}
-            <NavDropdown 
-              label={t('free_tools.title')} 
-              items={freeToolsItems}
-            />
-            
-            {/* Plans Link */}
-            <Button
-              component={Link}
-              href="/plans"
-              variant="subtle"
-              size="sm"
-              className={classes.navLink}
-            >
-              {t('plans')}
-            </Button>
+            {/* Desktop Navigation (right next to logo) */}
+            <Group className={classes.desktopNav} role="navigation" gap="sm">
+              {/* Getting Started Dropdown */}
+              <NavDropdown 
+                label={t('getting_started.title')} 
+                items={gettingStartedItems}
+              />
+              
+              {/* Products Dropdown */}
+              <NavDropdown 
+                label={t('products.title')} 
+                items={productsItems}
+              />
+              
+              {/* Free Tools Dropdown */}
+              <NavDropdown 
+                label={t('free_tools.title')} 
+                items={freeToolsItems}
+              />
+              
+              {/* Plans Link */}
+              <Button
+                component={Link}
+                href="/plans"
+                variant="subtle"
+                size="sm"
+                className={classes.navLink}
+              >
+                {t('plans')}
+              </Button>
+            </Group>
           </Group>
           
           {/* Right side elements */}

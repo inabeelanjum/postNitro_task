@@ -29,7 +29,7 @@
   text-decoration: none;
   display: flex;
   align-items: center;
-  margin-right: var(--mantine-spacing-md);
+  margin-right: 0;
 }
 
 .navLink {
@@ -112,9 +112,9 @@
     display: none !important;
   }
   
-  /* Ensure proper spacing between nav elements */
+  /* Remove extra gap in desktop view */
   .inner {
-    gap: var(--mantine-spacing-xl);
+    gap: 0;
   }
 }
 
