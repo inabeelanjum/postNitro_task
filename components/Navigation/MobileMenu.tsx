@@ -132,8 +132,8 @@ const MobileMenu = ({
         
         {/* Language Switcher */}
         <div className={classes.mobileLanguageSwitcher}>
-          <Text size="md" fw={700} mb="sm" c="black">
-            {t('language')}
+          <Text size="md" fw={700} mb="md" c="black">
+            Language
           </Text>
           <LanguageSwitcher />
         </div>
