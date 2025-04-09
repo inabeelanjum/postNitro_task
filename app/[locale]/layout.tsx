@@ -5,6 +5,7 @@ import { MantineProvider, ColorSchemeScript, mantineHtmlProps } from "@mantine/c
 import { loadMessages } from "../i18n/server";
 import { theme } from "../../theme";
 import { locales, defaultLocale } from "../i18n/config";
+import Navigation from "../../components/Navigation";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -17,8 +18,9 @@ export default async function LocaleLayout({
   children: React.ReactNode;
   params: { locale: string };
 }) {
-  // We need to destructure this way to avoid the "params should be awaited" error
-  const { locale } = params || { locale: defaultLocale };
+  // Properly handle params
+  const safeParams = await Promise.resolve(params);
+  const locale = safeParams?.locale || defaultLocale;
   
   // Load messages for the current locale with fallback
   const messages = await loadMessages(locale);
@@ -36,7 +38,10 @@ export default async function LocaleLayout({
       </head>
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <MantineProvider theme={theme}>{children}</MantineProvider>
+          <MantineProvider theme={theme}>
+            <Navigation />
+            {children}
+          </MantineProvider>
         </NextIntlClientProvider>
       </body>
     </html>
