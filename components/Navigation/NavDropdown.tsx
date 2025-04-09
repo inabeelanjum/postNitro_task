@@ -35,7 +35,7 @@ const NavDropdown = ({ label, items, href }: NavDropdownProps) => {
         variant="subtle"
         className={classes.navLink}
         rightSection={<CaretDown size={16} />}
-        compact
+        size="sm"
         fw={700}
       >
         {label}
@@ -60,7 +60,7 @@ const NavDropdown = ({ label, items, href }: NavDropdownProps) => {
           variant="subtle"
           className={classes.navLink}
           rightSection={<CaretDown size={16} />}
-          compact
+          size="sm"
           aria-haspopup="menu"
           aria-expanded={opened}
           fw={700}
