@@ -1,10 +1,11 @@
 'use client';
 
-import { Button, Text, Stack } from '@mantine/core';
+import { Button, Text, Stack, Group } from '@mantine/core';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
-import { X } from '@phosphor-icons/react';
+import { X, Sparkle } from '@phosphor-icons/react';
 import classes from './Navigation.module.css';
+import LanguageSwitcher from './LanguageSwitcher';
 
 interface NavItem {
   title: string;
@@ -28,6 +29,7 @@ const MobileMenu = ({
   freeToolsItems 
 }: MobileMenuProps) => {
   const t = useTranslations('nav');
+  const common = useTranslations('common');
 
   if (!isOpen) return null;
 
@@ -39,16 +41,18 @@ const MobileMenu = ({
       <Button
         className={classes.closeButton}
         variant="subtle"
+        size="lg"
         onClick={onClose}
         aria-label="Close menu"
+        color="dark"
       >
-        <X size={24} />
+        <X size={28} weight="bold" />
       </Button>
       
       <div className={classes.mobileMenuLinks} role="navigation">
         {/* Getting Started Section */}
         <div>
-          <Text size="md" fw={500} role="heading" aria-level={2}>
+          <Text size="md" fw={700} role="heading" aria-level={2} c="black">
             {t('getting_started.title')}
           </Text>
           <Stack gap="md" role="list">
@@ -60,8 +64,10 @@ const MobileMenu = ({
                 target={item.external ? '_blank' : undefined}
                 variant="subtle"
                 role="listitem"
+                fw={700}
+                c="black"
               >
-                <Text size="sm">{item.title}</Text>
+                <Text size="sm" fw={700}>{item.title}</Text>
               </Button>
             ))}
           </Stack>
@@ -69,7 +75,7 @@ const MobileMenu = ({
         
         {/* Products Section */}
         <div>
-          <Text size="md" fw={500} role="heading" aria-level={2}>
+          <Text size="md" fw={700} role="heading" aria-level={2} c="black">
             {t('products.title')}
           </Text>
           <Stack gap="md" role="list">
@@ -80,8 +86,10 @@ const MobileMenu = ({
                 href={item.href}
                 variant="subtle"
                 role="listitem"
+                fw={700}
+                c="black"
               >
-                <Text size="sm">{item.title}</Text>
+                <Text size="sm" fw={700}>{item.title}</Text>
               </Button>
             ))}
           </Stack>
@@ -89,7 +97,7 @@ const MobileMenu = ({
         
         {/* Free Tools Section */}
         <div>
-          <Text size="md" fw={500} role="heading" aria-level={2}>
+          <Text size="md" fw={700} role="heading" aria-level={2} c="black">
             {t('free_tools.title')}
           </Text>
           <Stack gap="md" role="list">
@@ -100,8 +108,10 @@ const MobileMenu = ({
                 href={item.href}
                 variant="subtle"
                 role="listitem"
+                fw={700}
+                c="black"
               >
-                <Text size="sm">{item.title}</Text>
+                <Text size="sm" fw={700}>{item.title}</Text>
               </Button>
             ))}
           </Stack>
@@ -114,9 +124,38 @@ const MobileMenu = ({
           variant="subtle"
           size="md"
           className={classes.mobileAnchor}
+          fw={700}
+          c="black"
         >
           {t('plans')}
         </Button>
+        
+        {/* Language Switcher */}
+        <div className={classes.mobileLanguageSwitcher}>
+          <Text size="md" fw={700} mb="sm" c="black">
+            {t('language')}
+          </Text>
+          <LanguageSwitcher />
+        </div>
+        
+        {/* Action Buttons */}
+        <Stack gap="md" mt="xl">
+          {/* Create Image Post Button */}
+          <Button
+            component={Link}
+            href="/app/post-maker"
+            variant="outline"
+            size="md"
+            fullWidth
+            leftSection={<Sparkle size={18} />}
+            className={classes.createImageBtn}
+          >
+            {common('buttons.create_image_post')} 
+            <span className={classes.betaBadge}>
+              {common('labels.beta')}
+            </span>
+          </Button>
+        </Stack>
       </div>
     </div>
   );

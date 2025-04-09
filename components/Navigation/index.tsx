@@ -48,99 +48,104 @@ const Navigation = () => {
     <header className={classes.header} role="banner">
       <Container size="fluid" className={classes.container}>
         <Group justify="space-between" align="center" className={classes.inner}>
-          {/* Left side with Logo and Nav */}
-          <Group className={classes.leftGroup}>
-            {/* Logo */}
-            <Link href="/" className={classes.logoAnchor}>
-              <Logo />
-            </Link>
+          {/* Left side with Logo */}
+          <Link href="/" className={classes.logoAnchor}>
+            <Logo />
+          </Link>
+
+          {/* Desktop Navigation (centered) */}
+          <Group className={classes.desktopNav} role="navigation" gap="sm">
+            {/* Getting Started Dropdown */}
+            <NavDropdown 
+              label={t('getting_started.title')} 
+              items={gettingStartedItems}
+            />
             
-            {/* Navigation (left-aligned with logo) */}
-            <Group className={classes.desktopNav} role="navigation" gap="sm">
-              {/* Getting Started Dropdown */}
-              <NavDropdown 
-                label={t('getting_started.title')} 
-                items={gettingStartedItems}
-              />
-              
-              {/* Products Dropdown */}
-              <NavDropdown 
-                label={t('products.title')} 
-                items={productsItems}
-              />
-              
-              {/* Free Tools Dropdown */}
-              <NavDropdown 
-                label={t('free_tools.title')} 
-                items={freeToolsItems}
-              />
-              
-              {/* Plans Link */}
-              <Button
-                component={Link}
-                href="/plans"
-                variant="subtle"
-                size="sm"
-                className={classes.navLink}
-              >
-                {t('plans')}
-              </Button>
-            </Group>
-          </Group>
-          
-          {/* Right side buttons */}
-          <Group className={`${classes.desktopNav} ${classes.rightGroup}`}>
-            {/* Language Switcher */}
-            <LanguageSwitcher />
+            {/* Products Dropdown */}
+            <NavDropdown 
+              label={t('products.title')} 
+              items={productsItems}
+            />
             
-            {/* Create Image Post Button */}
+            {/* Free Tools Dropdown */}
+            <NavDropdown 
+              label={t('free_tools.title')} 
+              items={freeToolsItems}
+            />
+            
+            {/* Plans Link */}
             <Button
               component={Link}
-              href="/app/post-maker"
-              variant="outline"
-              size="sm"
-              leftSection={<Sparkle size={18} />}
-              className={classes.createImageBtn}
-            >
-              {common('buttons.create_image_post')} 
-              <span className={classes.betaBadge}>
-                {common('labels.beta')}
-              </span>
-            </Button>
-            
-            {/* Create Carousel Button */}
-            <Button
-              component={Link}
-              href="/app/carousel-maker"
-              size="sm"
-              leftSection={<Sparkle size={18} />}
-              className={classes.createBtn}
-            >
-              {common('buttons.create_carousel')}
-            </Button>
-          </Group>
-          
-          {/* Mobile Navigation */}
-          <Group className={classes.mobileNav}>
-            <Button
+              href="/plans"
               variant="subtle"
               size="sm"
-              leftSection={<List size={24} />}
-              onClick={() => setMobileMenuOpen(true)}
-              aria-expanded={mobileMenuOpen}
-              aria-controls="mobile-menu"
+              className={classes.navLink}
             >
-              Menu
+              {t('plans')}
             </Button>
+          </Group>
+          
+          {/* Right side elements */}
+          <Group>
+            {/* Desktop only - Language Switcher and Buttons */}
+            <Group className={classes.desktopNav}>
+              {/* Language Switcher */}
+              <LanguageSwitcher />
+              
+              {/* Create Image Post Button */}
+              <Button
+                component={Link}
+                href="/app/post-maker"
+                variant="outline"
+                size="sm"
+                leftSection={<Sparkle size={18} />}
+                className={classes.createImageBtn}
+              >
+                {common('buttons.create_image_post')} 
+                <span className={classes.betaBadge}>
+                  {common('labels.beta')}
+                </span>
+              </Button>
+              
+              {/* Create Carousel Button */}
+              <Button
+                component={Link}
+                href="/app/carousel-maker"
+                size="sm"
+                leftSection={<Sparkle size={18} />}
+                className={classes.createBtn}
+              >
+                {common('buttons.create_carousel')}
+              </Button>
+            </Group>
             
-            <Button
-              component={Link}
-              href="/app/carousel-maker"
-              size="sm"
-              leftSection={<Sparkle size={18} />}
-            >
-              Create
-            </Button>
+            {/* Mobile only - Menu and Create buttons */}
+            <Group className={classes.mobileNav} gap={8}>
+              {/* Create button (mobile) */}
+              <Button
+                component={Link}
+                href="/app/carousel-maker"
+                size="sm"
+                leftSection={<Sparkle size={18} />}
+                className={classes.createBtn}
+              >
+                Create
+              </Button>
+              
+              {/* Menu Button */}
+              <Button
+                variant="subtle"
+                size="sm"
+                color="dark"
+                leftSection={<List size={22} weight="bold" />}
+                onClick={() => setMobileMenuOpen(true)}
+                aria-expanded={mobileMenuOpen}
+                aria-controls="mobile-menu"
+                fw={700}
+              >
+                Menu
+              </Button>
+            </Group>
           </Group>
         </Group>
       </Container>

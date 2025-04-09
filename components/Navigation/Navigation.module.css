@@ -12,7 +12,7 @@
 
 .container {
   width: 100%;
-  padding: 0 100px;
+  padding: 0 16px; /* Default padding for mobile */
 }
 
 .inner {
@@ -65,9 +65,9 @@
   color: white;
 }
 
-/* Show desktop nav only on medium screens and larger */
+/* Hide desktop nav on mobile */
 .desktopNav {
-  display: none;
+  display: none !important;
 }
 
 /* Left side group containing logo and menu items */
@@ -84,13 +84,32 @@
   gap: var(--mantine-spacing-xs);
 }
 
-@media (min-width: 768px) {
+/* Show mobile nav on mobile devices */
+.mobileNav {
+  display: none !important;
+}
+
+/* Mobile menu button */
+.menuButton {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  color: black;
+}
+
+/* Desktop styles */
+@media (min-width: 1351px) {
+  .container {
+    padding: 0 100px; /* Wider padding for desktop */
+  }
+  
   .desktopNav {
-    display: flex;
+    display: flex !important;
   }
   
   .mobileNav {
-    display: none;
+    display: none !important;
   }
   
   /* Ensure proper spacing between nav elements */
@@ -103,8 +122,7 @@
 .mobileMenu {
   position: fixed;
   inset: 0;
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: saturate(150%) blur(24px);
+  background: white;
   z-index: 100;
   display: none;
   flex-direction: column;
@@ -121,19 +139,33 @@
   top: var(--mantine-spacing-md);
   right: var(--mantine-spacing-md);
   z-index: 101;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.closeButton:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.05);
 }
 
 .mobileMenuLinks {
   display: flex;
   flex-direction: column;
   gap: var(--mantine-spacing-xl);
-  margin-top: var(--mantine-spacing-xl);
+  margin-top: 60px;
 }
 
 .mobileAnchor {
   width: 100%;
   text-align: left;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .languageSwitcher {
@@ -149,4 +181,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* Add language switcher to mobile menu */
+.mobileLanguageSwitcher {
+  margin-top: var(--mantine-spacing-xl);
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 1350px) {
+  .mobileNav {
+    display: flex !important;
+  }
+  
+  .desktopNav {
+    display: none !important;
+  }
 }
