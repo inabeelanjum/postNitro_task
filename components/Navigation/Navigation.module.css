@@ -33,8 +33,10 @@
 }
 
 .navLink {
-  font-weight: 500;
-  color: var(--mantine-color-gray-7);
+  font-weight: 700;
+  text-transform: none;
+  padding: 0 var(--mantine-spacing-xs);
+  color: black;
   transition: color 0.2s ease;
 }
 

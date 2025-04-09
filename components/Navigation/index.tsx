@@ -73,7 +73,6 @@ const Navigation = () => {
               <NavDropdown 
                 label={t('free_tools.title')} 
                 items={freeToolsItems}
-                href="/free-ai-tools"
               />
               
               {/* Plans Link */}

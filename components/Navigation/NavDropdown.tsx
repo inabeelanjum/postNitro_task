@@ -22,9 +22,10 @@ const NavDropdown = ({ label, items, href }: NavDropdownProps) => {
   const [opened, setOpened] = useState(false);
   const buttonRef = useRef<HTMLButtonElement>(null);
   
-  const toggleDropdown = () => {
-    setOpened(!opened);
-  };
+  // Calculate appropriate width for the dropdown
+  // Getting Started needs less width than other dropdowns
+  const isGettingStarted = label.includes('Getting') || label.includes('Started');
+  const dropdownWidth = isGettingStarted ? 150 : 220;
   
   if (href) {
     return (
@@ -35,6 +36,7 @@ const NavDropdown = ({ label, items, href }: NavDropdownProps) => {
         className={classes.navLink}
         rightSection={<CaretDown size={16} />}
         compact
+        fw={700}
       >
         {label}
       </Button>
@@ -46,8 +48,11 @@ const NavDropdown = ({ label, items, href }: NavDropdownProps) => {
       opened={opened}
       onChange={setOpened}
       shadow="md"
-      width={220}
+      width={dropdownWidth}
       position="bottom-start"
+      trigger="hover"
+      openDelay={100}
+      closeDelay={50}
     >
       <Menu.Target>
         <Button
@@ -56,9 +61,9 @@ const NavDropdown = ({ label, items, href }: NavDropdownProps) => {
           className={classes.navLink}
           rightSection={<CaretDown size={16} />}
           compact
-          onClick={toggleDropdown}
           aria-haspopup="menu"
           aria-expanded={opened}
+          fw={700}
         >
           {label}
         </Button>
@@ -73,8 +78,10 @@ const NavDropdown = ({ label, items, href }: NavDropdownProps) => {
               href={item.href}
               target={item.external ? '_blank' : undefined}
               role="listitem"
+              fw={700}
+              c="black"
             >
-              <Text size="sm">{item.title}</Text>
+              <Text size="sm" fw={700} c="black">{item.title}</Text>
             </Menu.Item>
           ))}
         </Stack>
