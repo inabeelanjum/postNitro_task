@@ -81,7 +81,7 @@ export default function PlansPage() {
           )}
         </Stack>
         
-        <Group align="flex-start" position="center" mt="md" mb="md" style={{ 
+        <Group align="flex-start" position="center" mt="md" mb="md" className={styles.plansContainer} style={{ 
           display: 'flex', 
           justifyContent: 'center',
           alignItems: 'center',
@@ -90,7 +90,11 @@ export default function PlansPage() {
           width: '100%'
         }}>
           {/* Starter Plan */}
-          <div style={{ position: 'relative', width: '32%', maxWidth: '430px' }}>
+          <div className={styles.planCardWrapper} style={{ 
+            position: 'relative', 
+            width: '32%', 
+            maxWidth: '430px'
+          }}>
             <div style={{ 
               position: 'absolute',
               backgroundColor: '#DADADA',
@@ -167,7 +171,11 @@ export default function PlansPage() {
           </div>
           
           {/* Solopreneur Plan */}
-          <div style={{ position: 'relative', width: '32%', maxWidth: '430px' }}>
+          <div className={styles.planCardWrapper} style={{ 
+            position: 'relative', 
+            width: '32%', 
+            maxWidth: '430px'
+          }}>
             <div style={{ 
               position: 'absolute',
               backgroundColor: '#087a68',
@@ -256,7 +264,11 @@ export default function PlansPage() {
           </div>
           
           {/* Team Plan */}
-          <div style={{ position: 'relative', width: '32%', maxWidth: '430px' }}>
+          <div className={styles.planCardWrapper} style={{ 
+            position: 'relative', 
+            width: '32%', 
+            maxWidth: '430px'
+          }}>
             <div style={{ 
               position: 'absolute',
               backgroundColor: '#DADADA',
@@ -360,7 +372,7 @@ export default function PlansPage() {
           {' '}to your subscription.
         </Text>
         
-        <div style={{ position: 'relative', width: '70%', maxWidth: '600px', margin: '0 auto' }}>
+        <div className={styles.freeCardWrapper} style={{ position: 'relative', width: '70%', maxWidth: '600px', margin: '0 auto' }}>
           <div style={{ 
             position: 'absolute',
             backgroundColor: '#DADADA',
@@ -384,7 +396,8 @@ export default function PlansPage() {
             <Stack 
               gap="md" 
               justify="center" 
-              align="center" 
+              align="center"
+              className={styles.freeCardContent} 
               style={{ 
                 flexDirection: 'row',
                 alignItems: 'var(--stack-align, center)',
