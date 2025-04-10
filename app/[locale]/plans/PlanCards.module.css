@@ -1,0 +1,56 @@
+.cardWidth {
+  flex: 1;
+  margin: 0 0.5rem;
+  max-width: 450px;
+}
+
+.cardDefault {
+  border-radius: 8px;
+}
+
+.cardSmall {
+  border-radius: 8px;
+  border-color: #087a68 !important;
+  box-shadow: 0 0 5px rgba(8, 122, 104, 0.1) !important;
+}
+
+.cardSmall header {
+  border-color: #087a68 !important;
+  background-color: #f0faf8 !important;
+}
+
+.planTitle {
+  font-weight: 700;
+  font-size: 1.125rem;
+  margin: 0;
+}
+
+.planOriginalPrice {
+  color: var(--mantine-color-gray-6);
+  font-size: 0.875rem;
+  text-decoration: none;
+  margin-top: 0.25rem;
+}
+
+.planCharge {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-top: 0.25rem;
+}
+
+.planSaving {
+  color: #087a68;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-top: 0.25rem;
+}
+
+.button {
+  margin-top: 1rem;
+}
+
+.subText {
+  color: var(--mantine-color-gray-6);
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+} 

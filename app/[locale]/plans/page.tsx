@@ -8,17 +8,16 @@ import {
   Text, 
   Group, 
   SegmentedControl, 
-  SimpleGrid, 
   Card, 
   Stack, 
   Badge, 
   Button, 
   List, 
-  ThemeIcon,
-  rem
+  ThemeIcon
 } from '@mantine/core';
-import { Check } from '@phosphor-icons/react';
+import { Check, Lightning } from '@phosphor-icons/react';
 import styles from './plans.module.css';
+import planStyles from './PlanCards.module.css';
 
 export default function PlansPage() {
   const t = useTranslations('plans');
@@ -28,42 +27,28 @@ export default function PlansPage() {
   
   // Plan features
   const starterPlanFeatures = [
-    'Create 5 carousels per month',
-    'LinkedIn Carousel maker',
-    'Instagram Carousel maker',
-    'TikTok Carousel maker',
-    'Twitter Carousel maker',
-    'Access to 10 designs',
-    'Download in PNG format',
-    'Basic customization'
+    'Watermark-free exports',
+    'Access to basic AI models (GPT-4o, Claude Haiku)',
+    '30 downloads/month',
+    '8 AI Generated Slides per Carousel'
   ];
   
   const solopreneurPlanFeatures = [
-    'Create 20 carousels per month',
-    'LinkedIn Carousel maker',
-    'Instagram Carousel maker',
-    'TikTok Carousel maker',
-    'Twitter Carousel maker',
-    'Access to all designs',
-    'Download in PNG format',
-    'Advanced customization',
-    'Custom branding',
-    'Full white label'
+    'Watermark-free exports',
+    'Access to advanced AI models (GPT-4, Claude Sonnet)',
+    '15 AI Generated Slides per Carousel',
+    'Upto 5 Brands',
+    'Unlimited downloads',
+    'Access to all templates',
+    'Custom color palettes',
+    'Create custom templates'
   ];
   
   const teamPlanFeatures = [
-    'Create 100 carousels per month',
-    'LinkedIn Carousel maker',
-    'Instagram Carousel maker',
-    'TikTok Carousel maker',
-    'Twitter Carousel maker', 
-    'Access to all designs',
-    'Download in PNG format',
-    'Advanced customization',
-    'Custom branding',
-    'Full white label',
-    'Team collaboration',
-    'Analytics'
+    '100 AI generated images per month',
+    'Up to 5 workspaces',
+    'Up to 20 slides per carousel',
+    '15 custom templates'
   ];
   
   return (
@@ -90,148 +75,204 @@ export default function PlansPage() {
           </Group>
           
           {isYearly && (
-            <Badge variant="filled" color="#087a68" sx={{ backgroundColor: '#087a68' }} mt={10}>
+            <Badge variant="filled" color="#087a68" sx={{ backgroundColor: '#087a68', '--badge-bg': '#087a68' }} mt={10}>
               {t('billing.discount')}
             </Badge>
           )}
         </Stack>
         
-        <SimpleGrid cols={{ base: 1, sm: 3, lg: 3 }} spacing="xl">
+        <Group grow align="flex-start" position="center" mt="md" mb="md">
           {/* Starter Plan */}
-          <Card withBorder radius="md" padding="md">
-            <Card.Section withBorder inheritPadding py="xs">
-              <Text fw={700} ta="center">{t('starter_plan.name')}</Text>
-            </Card.Section>
-            
-            <Stack align="center" mt="md">
-              <Text size="xs">{t('starter_plan.tag')}</Text>
-              <Group>
-                <Text size="xl" fw={700}>{t('starter_plan.price')}</Text>
-                <Text size="sm">{t('starter_plan.period')}</Text>
-              </Group>
+          <Card withBorder shadow="sm" padding="md" className={`${planStyles.cardWidth} ${planStyles.cardDefault}`}>
+            <Stack gap="md" justify="center" align="flex-start" style={{ flexDirection: 'column' }}>
+              <Stack gap={3} align="stretch" justify="flex-start">
+                <Text className={planStyles.planTitle}>Starter Plan</Text>
+                <Text className={planStyles.planCharge}>$10/month</Text>
+                <Text size="sm" c="dimmed">Perfect for getting started.</Text>
+              </Stack>
               
-              <Button variant="filled" fullWidth color="#087a68" sx={{ backgroundColor: '#087a68', '&:hover': { backgroundColor: '#066553' } }}>
+              <List
+                size="sm"
+                spacing="xs"
+                icon={
+                  <ThemeIcon color="#087A68" variant="outline" size="xs" radius="xl" sx={{ 
+                    '--ti-color': '#087a68', 
+                    '--ti-bd': 'calc(0.0625rem * var(--mantine-scale)) solid #087a68',
+                    color: '#087a68'
+                  }}>
+                    <Check size={16} />
+                  </ThemeIcon>
+                }
+              >
+                {starterPlanFeatures.map((feature, index) => (
+                  <List.Item key={index} style={{ lineHeight: '1.3rem', fontSize: '0.9rem', textAlign: 'left' }}>
+                    {feature}
+                  </List.Item>
+                ))}
+              </List>
+              
+              <Button
+                component="a"
+                href="/app/carousel-maker"
+                variant="outline"
+                size="sm"
+                fullWidth
+                leftSection={<Lightning size={18} color="#087a68" />}
+                className={planStyles.button}
+                styles={{
+                  root: {
+                    borderColor: '#087a68',
+                    '&:hover': {
+                      backgroundColor: 'rgba(8, 122, 104, 0.1)'
+                    }
+                  },
+                  inner: {
+                    color: '#087a68'
+                  },
+                  label: {
+                    color: '#087a68'
+                  },
+                  section: {
+                    color: '#087a68'
+                  }
+                }}
+              >
                 Get Started
               </Button>
+              
+              <Text className={planStyles.subText}>* All prices are subject to applicable taxes.</Text>
             </Stack>
-            
-            <List
-              spacing="sm"
-              size="sm"
-              mt="md"
-              center
-              icon={
-                <ThemeIcon color="#087a68" size={20} radius="xl">
-                  <Check size={rem(12)} weight="bold" />
-                </ThemeIcon>
-              }
-            >
-              {starterPlanFeatures.map((feature, index) => (
-                <List.Item key={index}>{feature}</List.Item>
-              ))}
-            </List>
-            
-            <Text size="xs" c="dimmed" mt="sm">
-              {t('disclaimers.taxes')}
-            </Text>
           </Card>
           
           {/* Solopreneur Plan */}
-          <Card withBorder radius="md" padding="md" sx={{ borderColor: '#087a68' }}>
-            <Card.Section withBorder inheritPadding py="xs" sx={{ borderColor: '#087a68', backgroundColor: '#f0faf8' }}>
-              <Text fw={700} ta="center">{t('solopreneur_plan.name')}</Text>
-            </Card.Section>
-            
-            <Stack align="center" mt="md">
-              <Text size="xs">{t('solopreneur_plan.tag')}</Text>
-              <Group>
-                <Text size="xl" fw={700}>{t('solopreneur_plan.price')}</Text>
-                <Text size="sm">{t('solopreneur_plan.period')}</Text>
-                <Text size="sm" td="line-through" c="dimmed">
-                  {t('solopreneur_plan.original_price')}
-                </Text>
-              </Group>
+          <Card withBorder shadow="xl" padding="md" className={`${planStyles.cardWidth} ${planStyles.cardSmall}`}>
+            <Stack gap="md" justify="center" align="flex-start" style={{ flexDirection: 'column' }}>
+              <Stack gap={3} align="stretch" justify="flex-start">
+                <Text className={planStyles.planTitle}>Solopreneur Plan</Text>
+                <Text className={planStyles.planOriginalPrice}>Previously: $20/month</Text>
+                <Text className={planStyles.planCharge}>$12/month</Text>
+                <Text className={planStyles.planSaving}>Saves you $96 per year.</Text>
+                <Text size="sm" c="dimmed">Perfect for solo creators.</Text>
+              </Stack>
               
-              {isYearly && (
-                <Badge color="#087a68" sx={{ backgroundColor: '#087a68' }}>
-                  {t('solopreneur_plan.yearly_savings')}
-                </Badge>
-              )}
+              <List
+                size="sm"
+                spacing="xs"
+                icon={
+                  <ThemeIcon color="#087A68" variant="outline" size="xs" radius="xl" sx={{ 
+                    '--ti-color': '#087a68', 
+                    '--ti-bd': 'calc(0.0625rem * var(--mantine-scale)) solid #087a68',
+                    color: '#087a68'
+                  }}>
+                    <Check size={16} />
+                  </ThemeIcon>
+                }
+              >
+                {solopreneurPlanFeatures.map((feature, index) => (
+                  <List.Item key={index} style={{ lineHeight: '1.3rem', fontSize: '0.9rem', textAlign: 'left' }}>
+                    {feature}
+                  </List.Item>
+                ))}
+              </List>
               
-              <Button variant="filled" fullWidth color="#087a68" sx={{ backgroundColor: '#087a68', '&:hover': { backgroundColor: '#066553' } }}>
+              <Button
+                component="a"
+                href="/app/carousel-maker"
+                variant="filled"
+                size="sm"
+                fullWidth
+                leftSection={<Lightning size={18} color="white" />}
+                className={planStyles.button}
+                styles={{
+                  root: {
+                    backgroundColor: '#087a68',
+                    borderColor: '#087a68',
+                    '&:hover': {
+                      backgroundColor: '#066553'
+                    }
+                  },
+                  inner: {
+                    color: 'white'
+                  },
+                  label: {
+                    color: 'white'
+                  },
+                  section: {
+                    color: 'white'
+                  }
+                }}
+              >
                 Get Started
               </Button>
+              
+              <Text className={planStyles.subText}>* All prices are subject to applicable taxes.</Text>
             </Stack>
-            
-            <List
-              spacing="sm"
-              size="sm"
-              mt="md"
-              center
-              icon={
-                <ThemeIcon color="#087a68" size={20} radius="xl">
-                  <Check size={rem(12)} weight="bold" />
-                </ThemeIcon>
-              }
-            >
-              {solopreneurPlanFeatures.map((feature, index) => (
-                <List.Item key={index}>{feature}</List.Item>
-              ))}
-            </List>
-            
-            <Text size="xs" c="dimmed" mt="sm">
-              {t('disclaimers.taxes')}
-            </Text>
           </Card>
           
           {/* Team Plan */}
-          <Card withBorder radius="md" padding="md">
-            <Card.Section withBorder inheritPadding py="xs">
-              <Text fw={700} ta="center">{t('team_plan.name')}</Text>
-            </Card.Section>
-            
-            <Stack align="center" mt="md">
-              <Text size="xs">{t('team_plan.tag')}</Text>
-              <Group>
-                <Text size="xl" fw={700}>{t('team_plan.price')}</Text>
-                <Text size="sm">{t('team_plan.period')}</Text>
-                <Text size="sm" td="line-through" c="dimmed">
-                  {t('team_plan.original_price')}
-                </Text>
-              </Group>
+          <Card withBorder shadow="lg" padding="md" className={`${planStyles.cardWidth} ${planStyles.cardDefault}`}>
+            <Stack gap="md" justify="center" align="flex-start" style={{ flexDirection: 'column' }}>
+              <Stack gap={3} align="stretch" justify="flex-start">
+                <Text className={planStyles.planTitle}>Team Plan</Text>
+                <Text className={planStyles.planOriginalPrice}>Previously: $50/month</Text>
+                <Text className={planStyles.planCharge}>$30/month</Text>
+                <Text className={planStyles.planSaving}>Saves you $240 per year.</Text>
+                <Text size="sm" c="dimmed">Perfect for small teams.</Text>
+              </Stack>
               
-              {isYearly && (
-                <Badge color="#087a68" sx={{ backgroundColor: '#087a68' }}>
-                  {t('team_plan.yearly_savings')}
-                </Badge>
-              )}
+              <List
+                size="sm"
+                spacing="xs"
+                icon={
+                  <ThemeIcon color="#087A68" variant="outline" size="xs" radius="xl" sx={{ 
+                    '--ti-color': '#087a68', 
+                    '--ti-bd': 'calc(0.0625rem * var(--mantine-scale)) solid #087a68',
+                    color: '#087a68'
+                  }}>
+                    <Check size={16} />
+                  </ThemeIcon>
+                }
+              >
+                {teamPlanFeatures.map((feature, index) => (
+                  <List.Item key={index} style={{ lineHeight: '1.3rem', fontSize: '0.9rem', textAlign: 'left' }}>
+                    {feature}
+                  </List.Item>
+                ))}
+              </List>
               
-              <Button variant="filled" fullWidth color="#087a68" sx={{ backgroundColor: '#087a68', '&:hover': { backgroundColor: '#066553' } }}>
+              <Button
+                component="a"
+                href="/app/carousel-maker"
+                variant="outline"
+                size="sm"
+                fullWidth
+                leftSection={<Lightning size={18} color="#087a68" />}
+                className={planStyles.button}
+                styles={{
+                  root: {
+                    borderColor: '#087a68',
+                    '&:hover': {
+                      backgroundColor: 'rgba(8, 122, 104, 0.1)'
+                    }
+                  },
+                  inner: {
+                    color: '#087a68'
+                  },
+                  label: {
+                    color: '#087a68'
+                  },
+                  section: {
+                    color: '#087a68'
+                  }
+                }}
+              >
                 Get Started
               </Button>
+              
+              <Text className={planStyles.subText}>* All prices are subject to applicable taxes.</Text>
             </Stack>
-            
-            <List
-              spacing="sm"
-              size="sm"
-              mt="md"
-              center
-              icon={
-                <ThemeIcon color="#087a68" size={20} radius="xl">
-                  <Check size={rem(12)} weight="bold" />
-                </ThemeIcon>
-              }
-            >
-              {teamPlanFeatures.map((feature, index) => (
-                <List.Item key={index}>{feature}</List.Item>
-              ))}
-            </List>
-            
-            <Text size="xs" c="dimmed" mt="sm">
-              {t('disclaimers.taxes')}
-            </Text>
           </Card>
-        </SimpleGrid>
+        </Group>
         
         <Text size="sm" c="dimmed" ta="center" mt={40}>
           {t('disclaimers.addons')}
