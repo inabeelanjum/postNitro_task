@@ -274,9 +274,69 @@ export default function PlansPage() {
           </Card>
         </Group>
         
-        <Text size="sm" c="dimmed" ta="center" mt={40}>
+        <Text size="sm" c="dimmed" ta="center" mt={40} mb={20}>
           {t('disclaimers.addons')}
         </Text>
+        
+        <Card withBorder shadow="sm" padding="md" className={planStyles.cardDefault} mt={20} mx="auto" style={{ maxWidth: '800px' }}>
+          <Stack gap="md" justify="center" align="center" style={{ flexDirection: 'row' }}>
+            <Stack gap={3} align="stretch" justify="flex-start">
+              <Text className={planStyles.planTitle}>Free Plan</Text>
+              <Text className={planStyles.planCharge}>$0/month</Text>
+              <Text size="sm" c="dimmed">To help you get started.</Text>
+            </Stack>
+            
+            <List
+              size="sm"
+              spacing="xs"
+              icon={
+                <ThemeIcon color="#087A68" variant="outline" size="xs" radius="xl" sx={{ 
+                  '--ti-color': '#087a68', 
+                  '--ti-bd': 'calc(0.0625rem * var(--mantine-scale)) solid #087a68',
+                  color: '#087a68'
+                }}>
+                  <Check size={16} />
+                </ThemeIcon>
+              }
+            >
+              <List.Item style={{ lineHeight: '1.3rem', fontSize: '0.9rem', textAlign: 'left' }}>
+                Access to GPT 4o-Mini
+              </List.Item>
+              <List.Item style={{ lineHeight: '1.3rem', fontSize: '0.9rem', textAlign: 'left' }}>
+                5 downloads per month
+              </List.Item>
+              <List.Item style={{ lineHeight: '1.3rem', fontSize: '0.9rem', textAlign: 'left' }}>
+                Access to basic templates
+              </List.Item>
+            </List>
+            
+            <Button
+              component="a"
+              href="/app/carousel-maker"
+              variant="outline"
+              leftSection={<Lightning size={18} color="#087a68" />}
+              styles={{
+                root: {
+                  borderColor: '#087a68',
+                  '&:hover': {
+                    backgroundColor: 'rgba(8, 122, 104, 0.1)'
+                  }
+                },
+                inner: {
+                  color: '#087a68'
+                },
+                label: {
+                  color: '#087a68'
+                },
+                section: {
+                  color: '#087a68'
+                }
+              }}
+            >
+              Get Started
+            </Button>
+          </Stack>
+        </Card>
       </Container>
     </div>
   );
