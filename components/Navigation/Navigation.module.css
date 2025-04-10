@@ -40,11 +40,11 @@
 }
 
 .navLink:hover {
-  color: var(--mantine-color-black);
+  color: #087a68;
 }
 
 .betaBadge {
-  background: linear-gradient(105deg, var(--mantine-color-teal-filled) 0%, var(--mantine-color-lime-filled) 100%);
+  background: linear-gradient(105deg, #087a68 0%, #066553 100%);
   color: white;
   font-size: 10px;
   font-weight: 600;
@@ -55,13 +55,23 @@
 }
 
 .createImageBtn {
-  border-color: var(--mantine-color-teal-6);
-  color: var(--mantine-color-teal-7);
+  border-color: #087a68;
+  color: #087a68;
+}
+
+.createImageBtn:hover {
+  background-color: rgba(8, 122, 104, 0.05);
+  border-color: #066553;
+  color: #066553;
 }
 
 .createBtn {
-  background-color: var(--mantine-color-teal-7);
+  background-color: #087a68;
   color: white;
+}
+
+.createBtn:hover {
+  background-color: #066553;
 }
 
 /* Hide desktop nav on mobile */
