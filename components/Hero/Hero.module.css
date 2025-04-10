@@ -165,27 +165,110 @@
 }
 
 /* Responsive styles */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
+  .heroContent {
+    max-width: 900px;
+    padding: 0 2rem;
+  }
+  
+  .heroHeader {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .heroContent {
+    max-width: 800px;
+  }
+  
   .heroHeader {
     font-size: 2.25rem;
+  }
+  
+  .heroDescription {
+    font-size: 1.05rem;
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroWrapper {
+    height: auto;
+    min-height: 100vh;
+    padding: 6rem 0 3rem;
+  }
+  
+  .heroContent {
+    max-width: 100%;
+    padding: 0 1.5rem;
+  }
+  
+  .heroHeader {
+    font-size: 2rem;
+    max-width: 100%;
+  }
+  
+  .heroDescription {
+    font-size: 1rem;
+    max-width: 100%;
   }
   
   .userSectionWrapper {
     flex-direction: column;
     align-items: center;
+    gap: 2rem;
   }
   
   .divider {
     display: none;
   }
+  
+  .userGroup, .embedGroup {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .ctaButton {
+    width: 100%;
+    max-width: 300px;
+  }
 }
 
 @media (max-width: 480px) {
-  .heroHeader {
-    font-size: 1.875rem;
+  .heroWrapper {
+    padding: 5rem 0 2rem;
   }
   
-  .heroDescription {
-    font-size: 1rem;
+  .heroContent {
+    padding: 0 1rem;
+  }
+  
+  .heroHeader {
+    font-size: 1.75rem;
+  }
+  
+  .heroBadge {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .userAvatars img {
+    max-width: 180px;
+    height: auto;
+  }
+  
+  .platformLogos img {
+    max-width: 160px;
+    height: auto;
+  }
+  
+  .checkGroup {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  
+  .checkText {
+    text-align: center;
   }
 } 
