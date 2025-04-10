@@ -21,7 +21,7 @@ import planStyles from './PlanCards.module.css';
 
 export default function PlansPage() {
   const t = useTranslations('plans');
-  const [billingPeriod, setBillingPeriod] = useState('monthly');
+  const [billingPeriod, setBillingPeriod] = useState('yearly');
   
   const isYearly = billingPeriod === 'yearly';
   
@@ -70,13 +70,45 @@ export default function PlansPage() {
                 { label: t('billing.monthly'), value: 'monthly' },
                 { label: t('billing.yearly'), value: 'yearly' }
               ]}
-              size="md"
+              size="sm"
+              styles={{
+                root: {
+                  width: '240px',
+                  borderRadius: '10px'
+                },
+                label: {
+                  padding: '6px 16px',
+                  borderRadius: '10px'
+                },
+                control: {
+                  borderRadius: '10px'
+                },
+                indicator: {
+                  borderRadius: '8px'
+                }
+              }}
             />
           </Group>
           
           {isYearly && (
-            <Badge variant="filled" color="#087a68" sx={{ backgroundColor: '#087a68', '--badge-bg': '#087a68' }} mt={10}>
-              {t('billing.discount')}
+            <Badge 
+              variant="filled" 
+              color="#087a68" 
+              size="lg"
+              sx={{ 
+                backgroundColor: '#087a68', 
+                '--badge-bg': '#087a68',
+                '--badge-color': 'var(--mantine-color-white)',
+                '--badge-bd': 'calc(0.0625rem * var(--mantine-scale)) solid transparent',
+                fontSize: '1rem',
+                padding: '10px 16px',
+                height: 'auto',
+                textTransform: 'uppercase',
+                fontWeight: 600
+              }} 
+              mt={16}
+            >
+              30% OFF ON YEARLY SUBSCRIPTION! - ANNUAL30OFF
             </Badge>
           )}
         </Stack>
@@ -198,7 +230,7 @@ export default function PlansPage() {
                   <Text className={planStyles.planTitle}>Solopreneur Plan</Text>
                   {isYearly ? (
                     <div>
-                      <Text className={planStyles.planOriginalPrice}>$20/month</Text>
+                      <Text className={planStyles.planOriginalPrice}>Previously: $20/month</Text>
                       <Text className={planStyles.planCharge}>$12/month</Text>
                       <Text className={planStyles.planSaving}>Saves you $96 per year.</Text>
                     </div>
@@ -288,7 +320,7 @@ export default function PlansPage() {
                   <Text className={planStyles.planTitle}>Team Plan</Text>
                   {isYearly ? (
                     <div>
-                      <Text className={planStyles.planOriginalPrice}>$50/month</Text>
+                      <Text className={planStyles.planOriginalPrice}>Previously: $50/month</Text>
                       <Text className={planStyles.planCharge}>$30/month</Text>
                       <Text className={planStyles.planSaving}>Saves you $240 per year.</Text>
                     </div>
