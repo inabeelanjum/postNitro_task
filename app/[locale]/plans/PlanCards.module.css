@@ -23,12 +23,13 @@
   font-weight: 700;
   font-size: 1.125rem;
   margin: 0;
+  color: #087a68;
 }
 
 .planOriginalPrice {
   color: var(--mantine-color-gray-6);
   font-size: 0.875rem;
-  text-decoration: none;
+  text-decoration: line-through;
   margin-top: 0.25rem;
 }
 
