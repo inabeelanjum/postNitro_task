@@ -90,7 +90,7 @@ export default function PlansPage() {
           </Group>
           
           {isYearly && (
-            <Badge variant="filled" color="green" mt={10}>
+            <Badge variant="filled" color="#087a68" sx={{ backgroundColor: '#087a68' }} mt={10}>
               {t('billing.discount')}
             </Badge>
           )}
@@ -110,7 +110,7 @@ export default function PlansPage() {
                 <Text size="sm">{t('starter_plan.period')}</Text>
               </Group>
               
-              <Button variant="filled" fullWidth color="teal">
+              <Button variant="filled" fullWidth color="#087a68" sx={{ backgroundColor: '#087a68', '&:hover': { backgroundColor: '#066553' } }}>
                 Get Started
               </Button>
             </Stack>
@@ -121,7 +121,7 @@ export default function PlansPage() {
               mt="md"
               center
               icon={
-                <ThemeIcon color="teal" size={20} radius="xl">
+                <ThemeIcon color="#087a68" size={20} radius="xl">
                   <Check size={rem(12)} weight="bold" />
                 </ThemeIcon>
               }
@@ -153,12 +153,12 @@ export default function PlansPage() {
               </Group>
               
               {isYearly && (
-                <Badge color="green">
+                <Badge color="#087a68" sx={{ backgroundColor: '#087a68' }}>
                   {t('solopreneur_plan.yearly_savings')}
                 </Badge>
               )}
               
-              <Button variant="filled" fullWidth color="teal">
+              <Button variant="filled" fullWidth color="#087a68" sx={{ backgroundColor: '#087a68', '&:hover': { backgroundColor: '#066553' } }}>
                 Get Started
               </Button>
             </Stack>
@@ -169,7 +169,7 @@ export default function PlansPage() {
               mt="md"
               center
               icon={
-                <ThemeIcon color="teal" size={20} radius="xl">
+                <ThemeIcon color="#087a68" size={20} radius="xl">
                   <Check size={rem(12)} weight="bold" />
                 </ThemeIcon>
               }
@@ -201,12 +201,12 @@ export default function PlansPage() {
               </Group>
               
               {isYearly && (
-                <Badge color="green">
+                <Badge color="#087a68" sx={{ backgroundColor: '#087a68' }}>
                   {t('team_plan.yearly_savings')}
                 </Badge>
               )}
               
-              <Button variant="filled" fullWidth color="teal">
+              <Button variant="filled" fullWidth color="#087a68" sx={{ backgroundColor: '#087a68', '&:hover': { backgroundColor: '#066553' } }}>
                 Get Started
               </Button>
             </Stack>
@@ -217,7 +217,7 @@ export default function PlansPage() {
               mt="md"
               center
               icon={
-                <ThemeIcon color="teal" size={20} radius="xl">
+                <ThemeIcon color="#087a68" size={20} radius="xl">
                   <Check size={rem(12)} weight="bold" />
                 </ThemeIcon>
               }
