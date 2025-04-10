@@ -360,65 +360,105 @@ export default function PlansPage() {
           {' '}to your subscription.
         </Text>
         
-        <Card withBorder shadow="sm" padding="md" className={planStyles.cardDefault} mt={20} mx="auto" style={{ maxWidth: '800px' }}>
-          <Stack gap="md" justify="center" align="center" style={{ flexDirection: 'row' }}>
-            <Stack gap={3} align="stretch" justify="flex-start">
-              <Text className={planStyles.planTitle}>Free Plan</Text>
-              <Text className={planStyles.planCharge}>$0/month</Text>
-              <Text size="sm" c="dimmed">To help you get started.</Text>
-            </Stack>
-            
-            <List
-              size="sm"
-              spacing="xs"
-              icon={
-                <ThemeIcon color="#087A68" variant="outline" size="xs" radius="xl" sx={{ 
-                  '--ti-color': '#087a68', 
-                  '--ti-bd': 'calc(0.0625rem * var(--mantine-scale)) solid #087a68',
-                  color: '#087a68'
-                }}>
-                  <Check size={16} />
-                </ThemeIcon>
-              }
-            >
-              <List.Item style={{ lineHeight: '1.3rem', fontSize: '0.9rem', textAlign: 'left' }}>
-                Access to GPT 4o-Mini
-              </List.Item>
-              <List.Item style={{ lineHeight: '1.3rem', fontSize: '0.9rem', textAlign: 'left' }}>
-                5 downloads per month
-              </List.Item>
-              <List.Item style={{ lineHeight: '1.3rem', fontSize: '0.9rem', textAlign: 'left' }}>
-                Access to basic templates
-              </List.Item>
-            </List>
-            
-            <Button
-              component="a"
-              href="/app/carousel-maker"
-              variant="outline"
-              leftSection={<Lightning size={18} color="#087a68" />}
-              styles={{
-                root: {
-                  borderColor: '#087a68',
-                  '&:hover': {
-                    backgroundColor: 'rgba(8, 122, 104, 0.1)'
-                  }
-                },
-                inner: {
-                  color: '#087a68'
-                },
-                label: {
-                  color: '#087a68'
-                },
-                section: {
-                  color: '#087a68'
-                }
+        <div style={{ position: 'relative', width: '70%', maxWidth: '600px', margin: '0 auto' }}>
+          <div style={{ 
+            position: 'absolute',
+            backgroundColor: '#DADADA',
+            borderRadius: 'var(--mantine-radius-md)',
+            inset: '2px -5px -5px 2px',
+            zIndex: 0
+          }}></div>
+          <Card 
+            withBorder 
+            padding="md" 
+            className={planStyles.cardDefault} 
+            mt={20} 
+            style={{ 
+              backgroundColor: 'var(--mantine-color-default)',
+              borderRadius: 'var(--mantine-radius-default)',
+              borderColor: 'var(--mantine-color-default-border)',
+              position: 'relative',
+              zIndex: 1
+            }}
+          >
+            <Stack 
+              gap="md" 
+              justify="center" 
+              align="center" 
+              style={{ 
+                flexDirection: 'row',
+                alignItems: 'var(--stack-align, center)',
+                justifyContent: 'var(--stack-justify, center)', 
+                gap: 'var(--stack-gap, var(--mantine-spacing-md))'
               }}
             >
-              Get Started
-            </Button>
-          </Stack>
-        </Card>
+              <Stack gap={3} align="stretch" justify="flex-start" style={{ 
+                textAlign: 'center',
+                fontFamily: 'var(--mantine-font-family)'
+              }}>
+                <Text className={planStyles.planTitle} style={{ color: '#087a68' }}>Free Plan</Text>
+                <Text className={planStyles.planCharge} style={{ fontWeight: 700 }}>$0/month</Text>
+                <Text size="sm" c="dimmed" style={{ color: 'var(--mantine-color-dimmed)' }}>To help you get started.</Text>
+              </Stack>
+              
+              <List
+                size="sm"
+                spacing="xs"
+                icon={
+                  <ThemeIcon color="#087A68" variant="outline" size="xs" radius="xl" sx={{ 
+                    '--ti-color': '#087a68', 
+                    '--ti-bd': 'calc(0.0625rem * var(--mantine-scale)) solid #087a68',
+                    color: '#087a68'
+                  }}>
+                    <Check size={16} />
+                  </ThemeIcon>
+                }
+                style={{ 
+                  fontFamily: 'var(--mantine-font-family)',
+                  fontSize: 'var(--mantine-font-size-sm)'
+                }}
+              >
+                <List.Item style={{ lineHeight: 'var(--mantine-line-height-md)', fontSize: '0.9rem', textAlign: 'left' }}>
+                  Access to GPT 4o-Mini
+                </List.Item>
+                <List.Item style={{ lineHeight: 'var(--mantine-line-height-md)', fontSize: '0.9rem', textAlign: 'left' }}>
+                  5 downloads per month
+                </List.Item>
+                <List.Item style={{ lineHeight: 'var(--mantine-line-height-md)', fontSize: '0.9rem', textAlign: 'left' }}>
+                  Access to basic templates
+                </List.Item>
+              </List>
+              
+              <Button
+                component="a"
+                href="/app/carousel-maker"
+                variant="outline"
+                size="md"
+                leftSection={<Lightning size={18} color="#087a68" />}
+                styles={{
+                  root: {
+                    borderColor: '#087a68',
+                    '&:hover': {
+                      backgroundColor: 'rgba(8, 122, 104, 0.1)'
+                    }
+                  },
+                  inner: {
+                    color: '#087a68'
+                  },
+                  label: {
+                    color: '#087a68',
+                    fontFamily: 'var(--mantine-font-family)'
+                  },
+                  section: {
+                    color: '#087a68'
+                  }
+                }}
+              >
+                Get Started
+              </Button>
+            </Stack>
+          </Card>
+        </div>
       </Container>
     </div>
   );
