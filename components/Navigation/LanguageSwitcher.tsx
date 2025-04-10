@@ -16,6 +16,9 @@ const LanguageSwitcher = () => {
   // Get the current locale from the pathname or default to 'en'
   const currentLocale = pathname?.split('/')[1] || 'en';
   
+  // Make sure we have a valid locale that exists in our config
+  const safeLocale = locales.includes(currentLocale as any) ? currentLocale : 'en';
+  
   const handleLanguageChange = (locale: string) => {
     setOpened(false);
     
@@ -65,13 +68,14 @@ const LanguageSwitcher = () => {
             className={classes.langButton}
           >
             <Image
-              src={`/flags/${flagMap[currentLocale as keyof typeof flagMap]}`}
-              alt={currentLocale}
+              src={`${process.env.NODE_ENV === 'production' ? '' : ''}/flags/${flagMap[safeLocale as keyof typeof flagMap]}`}
+              alt={safeLocale}
               width={36}
               height={26}
               style={{ 
                 borderRadius: '4px'
               }}
+              priority
             />
           </Button>
         </Menu.Target>
@@ -82,7 +86,7 @@ const LanguageSwitcher = () => {
               key={locale}
               onClick={() => handleLanguageChange(locale)}
               style={{ 
-                fontWeight: locale === currentLocale ? 'bold' : 'normal',
+                fontWeight: locale === safeLocale ? 'bold' : 'normal',
                 display: 'flex',
                 alignItems: 'center',
                 color: 'black',
@@ -90,7 +94,7 @@ const LanguageSwitcher = () => {
               }}
             >
               <Image
-                src={`/flags/${flagMap[locale as keyof typeof flagMap]}`}
+                src={`${process.env.NODE_ENV === 'production' ? '' : ''}/flags/${flagMap[locale as keyof typeof flagMap] || flagMap['en']}`}
                 alt={locale}
                 width={28}
                 height={20}
@@ -98,6 +102,7 @@ const LanguageSwitcher = () => {
                   marginRight: '16px',
                   borderRadius: '4px'
                 }}
+                priority
               />
               {localeNames[locale as keyof typeof localeNames]}
             </Menu.Item>
