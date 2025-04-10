@@ -341,8 +341,23 @@ export default function PlansPage() {
           </div>
         </Group>
         
-        <Text size="sm" c="dimmed" ta="center" mt={40} mb={20}>
-          {t('disclaimers.addons')}
+        <Text 
+          style={{
+            color: '#475467',
+            fontSize: '1rem',
+            fontWeight: 500,
+            fontStyle: 'italic',
+            textAlign: 'center',
+            lineHeight: 'var(--mantine-line-height-md)',
+            marginTop: '40px',
+            marginBottom: '20px'
+          }}
+        >
+          If you require additional limits, you can{' '}
+          <span style={{ color: '#087a68', textDecoration: 'underline' }}>
+            add them as Add-Ons
+          </span>
+          {' '}to your subscription.
         </Text>
         
         <Card withBorder shadow="sm" padding="md" className={planStyles.cardDefault} mt={20} mx="auto" style={{ maxWidth: '800px' }}>
