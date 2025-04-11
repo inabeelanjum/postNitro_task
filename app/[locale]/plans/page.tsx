@@ -25,31 +25,11 @@ export default function PlansPage() {
   
   const isYearly = billingPeriod === 'yearly';
   
-  // Plan features
-  const starterPlanFeatures = [
-    'Watermark-free exports',
-    'Access to basic AI models (GPT-4o, Claude Haiku)',
-    '30 downloads/month',
-    '8 AI Generated Slides per Carousel'
-  ];
-  
-  const solopreneurPlanFeatures = [
-    'Watermark-free exports',
-    'Access to advanced AI models (GPT-4, Claude Sonnet)',
-    '15 AI Generated Slides per Carousel',
-    'Upto 5 Brands',
-    'Unlimited downloads',
-    'Access to all templates',
-    'Custom color palettes',
-    'Create custom templates'
-  ];
-  
-  const teamPlanFeatures = [
-    '100 AI generated images per month',
-    'Up to 5 workspaces',
-    'Up to 20 slides per carousel',
-    '15 custom templates'
-  ];
+  // Plan features - getting arrays directly instead of trying to split strings
+  const starterPlanFeatures = t.raw('starter_plan.features');
+  const solopreneurPlanFeatures = t.raw('solopreneur_plan.features');
+  const teamPlanFeatures = t.raw('team_plan.features');
+  const freeFeatures = t.raw('free_features');
   
   return (
     <div className={styles.plansWrapper}>
@@ -58,7 +38,7 @@ export default function PlansPage() {
           <Title order={1} ta="center" fw={600} size="48px">
             {t('title')}
           </Title>
-          <Text size="lg" ta="center" color="#475467" maw={600}>
+          <Text size="lg" ta="center" c="dimmed" maw={600}>
             {t('subtitle')}
           </Text>
           
@@ -108,7 +88,7 @@ export default function PlansPage() {
               }} 
               mt={16}
             >
-              30% OFF ON YEARLY SUBSCRIPTION! - ANNUAL30OFF
+              {t('billing.discount')}
             </Badge>
           )}
         </Stack>
@@ -143,9 +123,9 @@ export default function PlansPage() {
             }}>
               <Stack gap="md" justify="flex-start" align="flex-start" style={{ height: '100%' }}>
                 <Stack gap={3} align="stretch" justify="flex-start">
-                  <Text className={planStyles.planTitle}>Starter Plan</Text>
-                  <Text className={planStyles.planCharge}>$10/month</Text>
-                  <Text size="sm" c="dimmed">Perfect for getting started.</Text>
+                  <Text className={planStyles.planTitle}>{t('starter_plan.name')}</Text>
+                  <Text className={planStyles.planCharge}>{t('starter_plan.price')}{t('starter_plan.period')}</Text>
+                  <Text size="sm" c="dimmed">{t('starter_plan.description')}</Text>
                 </Stack>
                 
                 <List
@@ -194,10 +174,10 @@ export default function PlansPage() {
                     }
                   }}
                 >
-                  Get Started
+                  {t('cta.button')}
                 </Button>
                 
-                <Text className={planStyles.subText}>* All prices are subject to applicable taxes.</Text>
+                <Text className={planStyles.subText}>{t('disclaimers.taxes')}</Text>
               </Stack>
             </Card>
           </div>
@@ -227,17 +207,17 @@ export default function PlansPage() {
             }}>
               <Stack gap="md" justify="flex-start" align="flex-start" style={{ height: '100%' }}>
                 <Stack gap={3} align="stretch" justify="flex-start">
-                  <Text className={planStyles.planTitle}>Solopreneur Plan</Text>
+                  <Text className={planStyles.planTitle}>{t('solopreneur_plan.name')}</Text>
                   {isYearly ? (
                     <div>
-                      <Text className={planStyles.planOriginalPrice}>Previously: $20/month</Text>
-                      <Text className={planStyles.planCharge}>$12/month</Text>
-                      <Text className={planStyles.planSaving}>Saves you $96 per year.</Text>
+                      <Text className={planStyles.planOriginalPrice}>{t('solopreneur_plan.original_price')}</Text>
+                      <Text className={planStyles.planCharge}>{t('solopreneur_plan.price')}{t('solopreneur_plan.period')}</Text>
+                      <Text className={planStyles.planSaving}>{t('solopreneur_plan.yearly_savings')}</Text>
                     </div>
                   ) : (
-                    <Text className={planStyles.planCharge}>$20/month</Text>
+                    <Text className={planStyles.planCharge}>{t('solopreneur_plan.price')}{t('solopreneur_plan.period')}</Text>
                   )}
-                  <Text size="sm" c="dimmed">Perfect for solo creators.</Text>
+                  <Text size="sm" c="dimmed">{t('solopreneur_plan.description')}</Text>
                 </Stack>
                 
                 <List
@@ -287,10 +267,10 @@ export default function PlansPage() {
                     }
                   }}
                 >
-                  Get Started
+                  {t('cta.button')}
                 </Button>
                 
-                <Text className={planStyles.subText}>* All prices are subject to applicable taxes.</Text>
+                <Text className={planStyles.subText}>{t('disclaimers.taxes')}</Text>
               </Stack>
             </Card>
           </div>
@@ -317,17 +297,17 @@ export default function PlansPage() {
             }}>
               <Stack gap="md" justify="flex-start" align="flex-start" style={{ height: '100%' }}>
                 <Stack gap={3} align="stretch" justify="flex-start">
-                  <Text className={planStyles.planTitle}>Team Plan</Text>
+                  <Text className={planStyles.planTitle}>{t('team_plan.name')}</Text>
                   {isYearly ? (
                     <div>
-                      <Text className={planStyles.planOriginalPrice}>Previously: $50/month</Text>
-                      <Text className={planStyles.planCharge}>$30/month</Text>
-                      <Text className={planStyles.planSaving}>Saves you $240 per year.</Text>
+                      <Text className={planStyles.planOriginalPrice}>{t('team_plan.original_price')}</Text>
+                      <Text className={planStyles.planCharge}>{t('team_plan.price')}{t('team_plan.period')}</Text>
+                      <Text className={planStyles.planSaving}>{t('team_plan.yearly_savings')}</Text>
                     </div>
                   ) : (
-                    <Text className={planStyles.planCharge}>$50/month</Text>
+                    <Text className={planStyles.planCharge}>{t('team_plan.price')}{t('team_plan.period')}</Text>
                   )}
-                  <Text size="sm" c="dimmed">Perfect for small teams.</Text>
+                  <Text size="sm" c="dimmed">{t('team_plan.description')}</Text>
                 </Stack>
                 
                 <List
@@ -376,10 +356,10 @@ export default function PlansPage() {
                     }
                   }}
                 >
-                  Get Started
+                  {t('cta.button')}
                 </Button>
                 
-                <Text className={planStyles.subText}>* All prices are subject to applicable taxes.</Text>
+                <Text className={planStyles.subText}>{t('disclaimers.taxes')}</Text>
               </Stack>
             </Card>
           </div>
@@ -397,11 +377,7 @@ export default function PlansPage() {
             marginBottom: '20px'
           }}
         >
-          If you require additional limits, you can{' '}
-          <span style={{ color: '#087a68', textDecoration: 'underline' }}>
-            add them as Add-Ons
-          </span>
-          {' '}to your subscription.
+          {t('disclaimers.addons')}
         </Text>
         
         <div className={styles.freeCardWrapper} style={{ position: 'relative', width: '70%', maxWidth: '600px', margin: '0 auto' }}>
@@ -441,9 +417,9 @@ export default function PlansPage() {
                 textAlign: 'center',
                 fontFamily: 'var(--mantine-font-family)'
               }}>
-                <Text className={planStyles.planTitle} style={{ color: '#087a68' }}>Free Plan</Text>
-                <Text className={planStyles.planCharge} style={{ fontWeight: 700 }}>$0/month</Text>
-                <Text size="sm" c="dimmed" style={{ color: 'var(--mantine-color-dimmed)' }}>To help you get started.</Text>
+                <Text className={planStyles.planTitle} style={{ color: '#087a68' }}>{t('free_plan.name')}</Text>
+                <Text className={planStyles.planCharge} style={{ fontWeight: 700 }}>{t('free_plan.price')}{t('free_plan.period')}</Text>
+                <Text size="sm" c="dimmed" style={{ color: 'var(--mantine-color-dimmed)' }}>{t('free_plan.description')}</Text>
               </Stack>
               
               <List
@@ -463,15 +439,11 @@ export default function PlansPage() {
                   fontSize: 'var(--mantine-font-size-sm)'
                 }}
               >
-                <List.Item style={{ lineHeight: 'var(--mantine-line-height-md)', fontSize: '0.9rem', textAlign: 'left' }}>
-                  Access to GPT 4o-Mini
-                </List.Item>
-                <List.Item style={{ lineHeight: 'var(--mantine-line-height-md)', fontSize: '0.9rem', textAlign: 'left' }}>
-                  5 downloads per month
-                </List.Item>
-                <List.Item style={{ lineHeight: 'var(--mantine-line-height-md)', fontSize: '0.9rem', textAlign: 'left' }}>
-                  Access to basic templates
-                </List.Item>
+                {freeFeatures.map((feature, index) => (
+                  <List.Item key={index} style={{ lineHeight: 'var(--mantine-line-height-md)', fontSize: '0.9rem', textAlign: 'left' }}>
+                    {feature}
+                  </List.Item>
+                ))}
               </List>
               
               <Button
@@ -499,7 +471,7 @@ export default function PlansPage() {
                   }
                 }}
               >
-                Get Started
+                {t('cta.button')}
               </Button>
             </Stack>
           </Card>

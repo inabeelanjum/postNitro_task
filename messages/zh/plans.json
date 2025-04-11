@@ -1,40 +1,71 @@
 {
-  "title": "满足您轮播创建需求的套餐",
-  "subtitle": "从个人创作者到机构，我们都有适合您需求的套餐。",
+  "title": "满足您轮播图创建需求的订阅计划",
+  "subtitle": "从个人创作者到机构团队，我们有适合您需求的订阅计划。",
   "billing": {
-    "monthly": "月付",
-    "yearly": "年付",
-    "discount": "年度订阅享30%折扣！- ANNUAL30OFF"
+    "monthly": "按月付费",
+    "yearly": "按年付费",
+    "discount": "年度订阅享30%折扣! - ANNUAL30OFF"
   },
   "free_plan": {
-    "name": "免费套餐",
-    "price": "$0",
-    "period": "/月"
+    "name": "免费计划",
+    "price": "¥0",
+    "period": "/月",
+    "description": "帮助您开始使用。"
   },
   "starter_plan": {
-    "name": "入门套餐",
-    "price": "$10",
+    "name": "入门计划",
+    "price": "¥70",
     "period": "/月",
-    "tag": "适合初次使用"
+    "description": "完美适合初次使用。",
+    "features": [
+      "无水印导出",
+      "使用基础AI模型 (GPT-4o, Claude Haiku)",
+      "每月30次下载",
+      "每个轮播图8张AI生成幻灯片"
+    ]
   },
   "solopreneur_plan": {
-    "name": "个人创业套餐",
-    "price": "$10",
+    "name": "个人创业计划",
+    "price": "¥84",
     "period": "/月",
-    "original_price": "$20",
-    "tag": "适合个人创作者",
-    "yearly_savings": "每年节省$120"
+    "original_price": "之前价格: ¥140/月",
+    "description": "完美适合个人创作者。",
+    "yearly_savings": "每年节省¥672。",
+    "features": [
+      "无水印导出",
+      "使用高级AI模型 (GPT-4, Claude Sonnet)",
+      "每个轮播图15张AI生成幻灯片",
+      "最多5个品牌",
+      "无限下载",
+      "使用所有模板",
+      "自定义配色方案",
+      "创建自定义模板"
+    ]
   },
   "team_plan": {
-    "name": "团队套餐",
-    "price": "$25",
+    "name": "团队计划",
+    "price": "¥210",
     "period": "/月",
-    "original_price": "$50",
-    "tag": "适合小型团队",
-    "yearly_savings": "每年节省$300"
+    "original_price": "之前价格: ¥350/月",
+    "description": "完美适合小型团队。",
+    "yearly_savings": "每年节省¥1680。",
+    "features": [
+      "每月100张AI生成图片",
+      "最多5个工作空间",
+      "每个轮播图最多20张幻灯片",
+      "15个自定义模板"
+    ]
   },
+  "cta": {
+    "button": "立即开始"
+  },
+  "free_features": [
+    "使用GPT 4o-Mini",
+    "每月5次下载",
+    "使用基础模板"
+  ],
   "disclaimers": {
     "taxes": "* 所有价格均需缴纳适用税费。",
-    "addons": "如果您需要额外的限额，可以将其作为附加服务添加到您的订阅中。"
+    "addons": "如果您需要更多限额，可以将其作为附加服务添加到您的订阅中。"
   }
 } 

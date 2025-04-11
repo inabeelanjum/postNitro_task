@@ -1,40 +1,71 @@
 {
   "title": "Planes para tus Necesidades de Creación de Carruseles",
-  "subtitle": "Desde creadores individuales hasta agencias, tenemos un plan que se adapta a tus requisitos.",
+  "subtitle": "Desde creadores independientes hasta agencias, tenemos un plan que se adapta a tus requisitos.",
   "billing": {
     "monthly": "Mensual",
     "yearly": "Anual",
     "discount": "¡30% DE DESCUENTO EN SUSCRIPCIÓN ANUAL! - ANNUAL30OFF"
   },
   "free_plan": {
-    "name": "PLAN GRATUITO",
+    "name": "Plan Gratuito",
     "price": "$0",
-    "period": "/mes"
+    "period": "/mes",
+    "description": "Para ayudarte a comenzar."
   },
   "starter_plan": {
-    "name": "PLAN INICIAL",
+    "name": "Plan Inicial",
     "price": "$10",
     "period": "/mes",
-    "tag": "Perfecto para comenzar"
+    "description": "Perfecto para comenzar.",
+    "features": [
+      "Exportaciones sin marca de agua",
+      "Acceso a modelos básicos de IA (GPT-4o, Claude Haiku)",
+      "30 descargas/mes",
+      "8 diapositivas generadas por IA por carrusel"
+    ]
   },
   "solopreneur_plan": {
-    "name": "PLAN EMPRENDEDOR",
-    "price": "$10",
+    "name": "Plan Emprendedor",
+    "price": "$12",
     "period": "/mes",
-    "original_price": "$20",
-    "tag": "Perfecto para creadores individuales",
-    "yearly_savings": "Ahorras $120 al año"
+    "original_price": "Anteriormente: $20/mes",
+    "description": "Perfecto para creadores independientes.",
+    "yearly_savings": "Ahorras $96 al año.",
+    "features": [
+      "Exportaciones sin marca de agua",
+      "Acceso a modelos avanzados de IA (GPT-4, Claude Sonnet)",
+      "15 diapositivas generadas por IA por carrusel",
+      "Hasta 5 marcas",
+      "Descargas ilimitadas",
+      "Acceso a todas las plantillas",
+      "Paletas de colores personalizadas",
+      "Crear plantillas personalizadas"
+    ]
   },
   "team_plan": {
-    "name": "PLAN PARA EQUIPOS",
-    "price": "$25",
+    "name": "Plan de Equipo",
+    "price": "$30",
     "period": "/mes",
-    "original_price": "$50",
-    "tag": "Perfecto para equipos pequeños",
-    "yearly_savings": "Ahorras $300 al año"
+    "original_price": "Anteriormente: $50/mes",
+    "description": "Perfecto para equipos pequeños.",
+    "yearly_savings": "Ahorras $240 al año.",
+    "features": [
+      "100 imágenes generadas por IA al mes",
+      "Hasta 5 espacios de trabajo",
+      "Hasta 20 diapositivas por carrusel",
+      "15 plantillas personalizadas"
+    ]
   },
+  "cta": {
+    "button": "Comenzar"
+  },
+  "free_features": [
+    "Acceso a GPT 4o-Mini",
+    "5 descargas por mes",
+    "Acceso a plantillas básicas"
+  ],
   "disclaimers": {
     "taxes": "* Todos los precios están sujetos a impuestos aplicables.",
-    "addons": "Si necesitas límites adicionales, puedes agregarlos como complementos a tu suscripción."
+    "addons": "Si necesitas límites adicionales, puedes añadirlos como complementos a tu suscripción."
   }
 } 

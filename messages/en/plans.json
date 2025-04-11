@@ -7,32 +7,63 @@
     "discount": "30% OFF ON YEARLY SUBSCRIPTION! - ANNUAL30OFF"
   },
   "free_plan": {
-    "name": "FREE PLAN",
+    "name": "Free Plan",
     "price": "$0",
-    "period": "/month"
+    "period": "/month",
+    "description": "To help you get started."
   },
   "starter_plan": {
-    "name": "STARTER PLAN",
+    "name": "Starter Plan",
     "price": "$10",
     "period": "/month",
-    "tag": "Perfect for getting started"
+    "description": "Perfect for getting started.",
+    "features": [
+      "Watermark-free exports",
+      "Access to basic AI models (GPT-4o, Claude Haiku)",
+      "30 downloads/month",
+      "8 AI Generated Slides per Carousel"
+    ]
   },
   "solopreneur_plan": {
-    "name": "SOLOPRENEUR PLAN",
-    "price": "$10",
+    "name": "Solopreneur Plan",
+    "price": "$12",
     "period": "/month",
-    "original_price": "$20",
-    "tag": "Perfect for solo creators",
-    "yearly_savings": "Saves you $120 per year"
+    "original_price": "Previously: $20/month",
+    "description": "Perfect for solo creators.",
+    "yearly_savings": "Saves you $96 per year.",
+    "features": [
+      "Watermark-free exports",
+      "Access to advanced AI models (GPT-4, Claude Sonnet)",
+      "15 AI Generated Slides per Carousel",
+      "Upto 5 Brands",
+      "Unlimited downloads",
+      "Access to all templates",
+      "Custom color palettes",
+      "Create custom templates"
+    ]
   },
   "team_plan": {
-    "name": "TEAM PLAN",
-    "price": "$25",
+    "name": "Team Plan",
+    "price": "$30",
     "period": "/month",
-    "original_price": "$50",
-    "tag": "Perfect for small teams",
-    "yearly_savings": "Saves you $300 per year"
+    "original_price": "Previously: $50/month",
+    "description": "Perfect for small teams.",
+    "yearly_savings": "Saves you $240 per year.",
+    "features": [
+      "100 AI generated images per month",
+      "Up to 5 workspaces",
+      "Up to 20 slides per carousel",
+      "15 custom templates"
+    ]
   },
+  "cta": {
+    "button": "Get Started"
+  },
+  "free_features": [
+    "Access to GPT 4o-Mini",
+    "5 downloads per month",
+    "Access to basic templates"
+  ],
   "disclaimers": {
     "taxes": "* All prices are subject to applicable taxes.",
     "addons": "If you require additional limits, you can add them as Add-Ons to your subscription."

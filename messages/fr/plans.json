@@ -1,38 +1,69 @@
 {
-  "title": "Forfaits pour vos Besoins de Création de Carrousels",
-  "subtitle": "Des créateurs individuels aux agences, nous avons un forfait adapté à vos besoins.",
+  "title": "Plans pour vos Besoins de Création de Carrousels",
+  "subtitle": "Des créateurs indépendants aux agences, nous avons un plan adapté à vos besoins.",
   "billing": {
     "monthly": "Mensuel",
     "yearly": "Annuel",
-    "discount": "30% DE RÉDUCTION SUR L'ABONNEMENT ANNUEL ! - ANNUAL30OFF"
+    "discount": "30% DE RÉDUCTION SUR L'ABONNEMENT ANNUEL! - ANNUAL30OFF"
   },
   "free_plan": {
-    "name": "FORFAIT GRATUIT",
-    "price": "0 €",
-    "period": "/mois"
+    "name": "Plan Gratuit",
+    "price": "0€",
+    "period": "/mois",
+    "description": "Pour vous aider à démarrer."
   },
   "starter_plan": {
-    "name": "FORFAIT DÉBUTANT",
-    "price": "10 €",
+    "name": "Plan Débutant",
+    "price": "10€",
     "period": "/mois",
-    "tag": "Parfait pour commencer"
+    "description": "Parfait pour commencer.",
+    "features": [
+      "Exportations sans filigrane",
+      "Accès aux modèles IA basiques (GPT-4o, Claude Haiku)",
+      "30 téléchargements/mois",
+      "8 diapositives générées par IA par carrousel"
+    ]
   },
   "solopreneur_plan": {
-    "name": "FORFAIT SOLO",
-    "price": "10 €",
+    "name": "Plan Entrepreneur",
+    "price": "12€",
     "period": "/mois",
-    "original_price": "20 €",
-    "tag": "Parfait pour les créateurs individuels",
-    "yearly_savings": "Économisez 120 € par an"
+    "original_price": "Auparavant: 20€/mois",
+    "description": "Parfait pour les créateurs indépendants.",
+    "yearly_savings": "Économisez 96€ par an.",
+    "features": [
+      "Exportations sans filigrane",
+      "Accès aux modèles IA avancés (GPT-4, Claude Sonnet)",
+      "15 diapositives générées par IA par carrousel",
+      "Jusqu'à 5 marques",
+      "Téléchargements illimités",
+      "Accès à tous les modèles",
+      "Palettes de couleurs personnalisées",
+      "Création de modèles personnalisés"
+    ]
   },
   "team_plan": {
-    "name": "FORFAIT ÉQUIPE",
-    "price": "25 €",
+    "name": "Plan Équipe",
+    "price": "30€",
     "period": "/mois",
-    "original_price": "50 €",
-    "tag": "Parfait pour les petites équipes",
-    "yearly_savings": "Économisez 300 € par an"
+    "original_price": "Auparavant: 50€/mois",
+    "description": "Parfait pour les petites équipes.",
+    "yearly_savings": "Économisez 240€ par an.",
+    "features": [
+      "100 images générées par IA par mois",
+      "Jusqu'à 5 espaces de travail",
+      "Jusqu'à 20 diapositives par carrousel",
+      "15 modèles personnalisés"
+    ]
   },
+  "cta": {
+    "button": "Commencer"
+  },
+  "free_features": [
+    "Accès à GPT 4o-Mini",
+    "5 téléchargements par mois",
+    "Accès aux modèles de base"
+  ],
   "disclaimers": {
     "taxes": "* Tous les prix sont soumis aux taxes applicables.",
     "addons": "Si vous avez besoin de limites supplémentaires, vous pouvez les ajouter comme modules complémentaires à votre abonnement."
