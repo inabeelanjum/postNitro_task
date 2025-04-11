@@ -22,18 +22,17 @@ const Hero = () => {
         {/* Badge */}
         <div className={classes.heroBadge}>
           <span className={classes.badgeDot}></span>
-          AI-Powered Carousel Generator For Viral Content
+          {t('badge')}
         </div>
         
         {/* Main Heading */}
         <Title order={1} className={classes.heroHeader}>
-          AI-Powered Carousel Generator for Instagram,<br />
-          LinkedIn & More
+          {t('title')}
         </Title>
         
         {/* Description */}
         <Text className={classes.heroDescription}>
-          PostNitro's AI-powered platform creates stunning carousels for Instagram, LinkedIn, TikTok, and more. Boost your social media engagement with <br /> customizable,brand-aligned content generated in minutes.
+          {t('description')}
         </Text>
         
         {/* User Groups Section */}
@@ -52,7 +51,7 @@ const Hero = () => {
                 {stars}
                 <Text size="sm" fw={600} className={classes.ratingText}>5.0</Text>
               </Group>
-              <Text className={classes.userCount}>Join 32,000+ Creators</Text>
+              <Text className={classes.userCount}>{t('userCount')}</Text>
             </Stack>
           </Group>
           
@@ -63,9 +62,9 @@ const Hero = () => {
           <Group className={classes.embedGroup}>
             <Stack gap={0}>
               <Text size="sm" fw={600} className={classes.embedTitle}>
-                Embedded Into
+                {t('embedTitle')}
               </Text>
-              <Text className={classes.embedCount}>40+ SMM Platforms</Text>
+              <Text className={classes.embedCount}>{t('embedCount')}</Text>
             </Stack>
             
             <Image 
@@ -79,7 +78,7 @@ const Hero = () => {
         
         {/* CTA Button */}
         <Link href="/app/carousel-maker" className={classes.ctaButton}>
-          Start Creating Free Carousels
+          {t('ctaButton')}
           <ArrowRight size={20} className={classes.ctaButtonIcon} />
         </Link>
         
@@ -87,7 +86,7 @@ const Hero = () => {
         <Group gap="xs" className={classes.checkGroup}>
           <Check size={15} color="#475467" />
           <Text size="sm" className={classes.checkText}>
-            No Credit Card Required | Free Downloads Every Month
+            {t('footer')}
           </Text>
         </Group>
       </div>
