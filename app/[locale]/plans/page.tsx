@@ -55,10 +55,10 @@ export default function PlansPage() {
     <div className={styles.plansWrapper}>
       <Container size="lg" py={64}>
         <Stack align="center" mb={48}>
-          <Title order={1} ta="center" fw={700}>
+          <Title order={1} ta="center" fw={600} size="48px">
             {t('title')}
           </Title>
-          <Text size="lg" ta="center" c="dimmed" maw={600}>
+          <Text size="lg" ta="center" color="#475467" maw={600}>
             {t('subtitle')}
           </Text>
           
