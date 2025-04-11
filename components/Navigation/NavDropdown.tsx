@@ -70,7 +70,7 @@ const NavDropdown = ({ label, items, href }: NavDropdownProps) => {
       </Menu.Target>
       
       <Menu.Dropdown>
-        <Stack gap={0} role="list">
+        <Stack gap={5} role="list">
           {items.map((item, index) => (
             <Menu.Item
               key={index}
@@ -80,7 +80,7 @@ const NavDropdown = ({ label, items, href }: NavDropdownProps) => {
               role="listitem"
               fw={500}
               c="black"
-              compact
+              compact={true}
             >
               <Text size="sm" fw={500} c="black">{item.title}</Text>
             </Menu.Item>
