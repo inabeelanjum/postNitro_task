@@ -9,6 +9,7 @@
   background-image: url('/grid-box.svg');
   background-repeat: repeat;
   background-size: auto;
+  background-position: 0 -20px;
   position: relative;
 }
 
@@ -22,15 +23,18 @@
 }
 
 .heroBadge {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.3rem;
   display: inline-flex;
   align-items: center;
   padding: 0.5rem 1rem;
-  border-radius: 25px;
+  border-radius: 10px;
   background-color: white;
   color: #333;
   font-weight: 600;
-  font-size: 0.875rem;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+  border: 1px solid #d0d5dd;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, .05);
 }
 
 .badgeDot {
