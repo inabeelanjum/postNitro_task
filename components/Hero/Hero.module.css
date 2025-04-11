@@ -14,7 +14,7 @@
 }
 
 .heroContent {
-  max-width: 1000px;
+  max-width: 1280px;
   margin: 0 auto;
   text-align: center;
   padding: 0 1rem;
@@ -47,14 +47,15 @@
 }
 
 .heroHeader {
-  font-size: 2.75rem;
-  font-weight: 800;
+  font-size: 3rem;
+  font-weight: 600;
   line-height: 1.2;
   margin-bottom: 1.5rem;
   color: #111827;
-  max-width: 900px;
+  max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
 }
 
 .heroDescription {
@@ -62,7 +63,7 @@
   line-height: 1.6;
   color: #4b5563;
   margin-bottom: 2.5rem;
-  max-width: 800px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -171,27 +172,33 @@
 /* Responsive styles */
 @media (max-width: 1200px) {
   .heroContent {
-    max-width: 900px;
+    max-width: 1100px;
     padding: 0 2rem;
   }
   
   .heroHeader {
     font-size: 2.5rem;
+    max-width: 1000px;
+  }
+  
+  .heroDescription {
+    max-width: 1000px;
   }
 }
 
 @media (max-width: 992px) {
   .heroContent {
-    max-width: 800px;
+    max-width: 900px;
   }
   
   .heroHeader {
     font-size: 2.25rem;
+    max-width: 800px;
   }
   
   .heroDescription {
     font-size: 1.05rem;
-    max-width: 700px;
+    max-width: 800px;
   }
 }
 

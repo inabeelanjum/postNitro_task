@@ -27,12 +27,13 @@ const Hero = () => {
         
         {/* Main Heading */}
         <Title order={1} className={classes.heroHeader}>
-          AI-Powered Carousel Generator for Instagram, LinkedIn & More
+          AI-Powered Carousel Generator for Instagram,<br />
+          LinkedIn & More
         </Title>
         
         {/* Description */}
         <Text className={classes.heroDescription}>
-          PostNitro's AI-powered platform creates stunning carousels for Instagram, LinkedIn, TikTok, and more. Boost your social media engagement with customizable, brand-aligned content generated in minutes.
+          PostNitro's AI-powered platform creates stunning carousels for Instagram, LinkedIn, TikTok, and more. Boost your social media engagement with <br /> customizable,brand-aligned content generated in minutes.
         </Text>
         
         {/* User Groups Section */}
@@ -46,8 +47,8 @@ const Hero = () => {
               height={44}
             />
             
-            <Stack gap="xs">
-              <Group gap="xs" className={classes.starRating}>
+            <Stack gap={0}>
+              <Group gap={2} className={classes.starRating}>
                 {stars}
                 <Text size="sm" fw={600} className={classes.ratingText}>5.0</Text>
               </Group>
@@ -60,7 +61,7 @@ const Hero = () => {
           
           {/* Embed Group */}
           <Group className={classes.embedGroup}>
-            <Stack gap="xs">
+            <Stack gap={0}>
               <Text size="sm" fw={600} className={classes.embedTitle}>
                 Embedded Into
               </Text>

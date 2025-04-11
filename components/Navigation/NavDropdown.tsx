@@ -80,7 +80,7 @@ const NavDropdown = ({ label, items, href }: NavDropdownProps) => {
               role="listitem"
               fw={500}
               c="black"
-              compact={true}
+              py={5}
             >
               <Text size="sm" fw={500} c="black">{item.title}</Text>
             </Menu.Item>
