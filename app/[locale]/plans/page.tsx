@@ -26,10 +26,10 @@ export default function PlansPage() {
   const isYearly = billingPeriod === 'yearly';
   
   // Plan features - getting arrays directly instead of trying to split strings
-  const starterPlanFeatures = t.raw('starter_plan.features');
-  const solopreneurPlanFeatures = t.raw('solopreneur_plan.features');
-  const teamPlanFeatures = t.raw('team_plan.features');
-  const freeFeatures = t.raw('free_features');
+  const starterPlanFeatures: string[] = t.raw('starter_plan.features');
+  const solopreneurPlanFeatures: string[] = t.raw('solopreneur_plan.features');
+  const teamPlanFeatures: string[] = t.raw('team_plan.features');
+  const freeFeatures: string[] = t.raw('free_features');
   
   return (
     <div className={styles.plansWrapper}>
