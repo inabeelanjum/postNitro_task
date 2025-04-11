@@ -59,7 +59,7 @@ const MobileMenu = ({
             {gettingStartedItems.map((item, index) => (
               <Button
                 key={index}
-                component={item.external ? 'a' : Link}
+                component="a"
                 href={item.href}
                 target={item.external ? '_blank' : undefined}
                 variant="subtle"

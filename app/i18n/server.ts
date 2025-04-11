@@ -32,9 +32,12 @@ export async function loadMessages(locale: string) {
 }
 
 export const intlConfig = getRequestConfig(async ({ locale }) => {
-  const messages = await loadMessages(locale);
+  // Ensure we have a valid locale
+  const safeLocale = locale || defaultLocale;
+  const messages = await loadMessages(safeLocale);
   
   return {
+    locale: safeLocale,
     messages,
     timeZone: 'UTC',
     now: new Date(),

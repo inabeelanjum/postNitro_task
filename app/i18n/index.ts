@@ -1,4 +1,4 @@
-import { createSharedPathnamesNavigation } from 'next-intl/navigation';
+// import { createSharedPathnamesNavigation } from 'next-intl/navigation';
 import { getRequestConfig } from 'next-intl/server';
 import { locales, defaultLocale } from './config';
 
@@ -13,10 +13,11 @@ export function getTranslations(namespace: string) {
   };
 }
 
-export const { Link, redirect, usePathname, useRouter } = createSharedPathnamesNavigation({ locales });
+// Temporarily comment out this line until we resolve the next-intl version issue
+// export const { Link, redirect, usePathname, useRouter } = createSharedPathnamesNavigation({ locales });
 
 export const requestConfig = getRequestConfig(async ({ locale }) => {
-  const messages = {};
+  const messages: Record<string, Record<string, string>> = {};
   
   // Load all message namespaces for the locale
   const namespaces = ['common', 'nav', 'hero', 'plans'];
@@ -31,6 +32,7 @@ export const requestConfig = getRequestConfig(async ({ locale }) => {
   }
   
   return {
+    locale: locale || defaultLocale,
     messages,
     timeZone: 'UTC',
     now: new Date(),

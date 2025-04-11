@@ -84,3 +84,57 @@ The application supports multiple languages using Next Intl:
 
 To change the language, use the language switcher in the navigation bar.
 
+## Deployment on Vercel
+
+This project is configured for seamless deployment on Vercel.
+
+### Manual Deployment
+
+1. Push your code to a Git repository (GitHub, GitLab, or Bitbucket)
+2. Import your repository to Vercel: https://vercel.com/new
+3. Vercel will detect Next.js automatically and configure the build settings
+4. Click "Deploy" and wait for the build to complete
+
+### Automatic Deployment with GitHub
+
+1. Push your code to a GitHub repository
+2. Connect your GitHub account to Vercel
+3. Select the repository to deploy
+4. Vercel will deploy your application and create a production URL
+5. Any future push to the main branch will trigger a new deployment
+
+### Environment Variables
+
+If your application requires environment variables, you can set them in the Vercel dashboard:
+
+1. Go to your project settings
+2. Navigate to "Environment Variables"
+3. Add your key-value pairs
+4. Choose the environments where they should be applied (Production, Preview, Development)
+
+### Custom Domain
+
+To add a custom domain to your Vercel deployment:
+
+1. Go to your project in the Vercel dashboard
+2. Navigate to "Domains"
+3. Add your domain and follow the verification instructions
+
+## Build
+
+To create a production build locally:
+
+```bash
+npm run build
+# or
+yarn build
+```
+
+To start the production build locally:
+
+```bash
+npm run start
+# or
+yarn start
+```
+

@@ -74,7 +74,7 @@ const NavDropdown = ({ label, items, href }: NavDropdownProps) => {
           {items.map((item, index) => (
             <Menu.Item
               key={index}
-              component={item.external ? 'a' : Link}
+              component="a"
               href={item.href}
               target={item.external ? '_blank' : undefined}
               role="listitem"

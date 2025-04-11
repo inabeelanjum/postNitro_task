@@ -75,7 +75,7 @@ export default function PlansPage() {
               variant="filled" 
               color="#087a68" 
               size="lg"
-              sx={{ 
+              style={{ 
                 backgroundColor: '#087a68', 
                 '--badge-bg': '#087a68',
                 '--badge-color': 'var(--mantine-color-white)',
@@ -93,7 +93,7 @@ export default function PlansPage() {
           )}
         </Stack>
         
-        <Group align="flex-start" position="center" mt="md" mb="md" className={styles.plansContainer} style={{ 
+        <Group align="flex-start" justify="center" mt="md" mb="md" className={styles.plansContainer} style={{ 
           display: 'flex', 
           justifyContent: 'center',
           alignItems: 'center',
@@ -132,7 +132,7 @@ export default function PlansPage() {
                   size="sm"
                   spacing="xs"
                   icon={
-                    <ThemeIcon color="#087A68" variant="outline" size="xs" radius="xl" sx={{ 
+                    <ThemeIcon color="#087A68" variant="outline" size="xs" radius="xl" style={{ 
                       '--ti-color': '#087a68', 
                       '--ti-bd': 'calc(0.0625rem * var(--mantine-scale)) solid #087a68',
                       color: '#087a68'
@@ -224,7 +224,7 @@ export default function PlansPage() {
                   size="sm"
                   spacing="xs"
                   icon={
-                    <ThemeIcon color="#087A68" variant="outline" size="xs" radius="xl" sx={{ 
+                    <ThemeIcon color="#087A68" variant="outline" size="xs" radius="xl" style={{ 
                       '--ti-color': '#087a68', 
                       '--ti-bd': 'calc(0.0625rem * var(--mantine-scale)) solid #087a68',
                       color: '#087a68'
@@ -314,7 +314,7 @@ export default function PlansPage() {
                   size="sm"
                   spacing="xs"
                   icon={
-                    <ThemeIcon color="#087A68" variant="outline" size="xs" radius="xl" sx={{ 
+                    <ThemeIcon color="#087A68" variant="outline" size="xs" radius="xl" style={{ 
                       '--ti-color': '#087a68', 
                       '--ti-bd': 'calc(0.0625rem * var(--mantine-scale)) solid #087a68',
                       color: '#087a68'
@@ -426,7 +426,7 @@ export default function PlansPage() {
                 size="sm"
                 spacing="xs"
                 icon={
-                  <ThemeIcon color="#087A68" variant="outline" size="xs" radius="xl" sx={{ 
+                  <ThemeIcon color="#087A68" variant="outline" size="xs" radius="xl" style={{ 
                     '--ti-color': '#087a68', 
                     '--ti-bd': 'calc(0.0625rem * var(--mantine-scale)) solid #087a68',
                     color: '#087a68'

@@ -49,7 +49,7 @@ const Navigation = () => {
       <Container size="fluid" className={classes.container}>
         <Group justify="space-between" align="center" className={classes.inner}>
           {/* Left side with Logo and Nav items */}
-          <Group spacing="xs">
+          <Group gap="xs">
             {/* Logo */}
             <Link href="/" className={classes.logoAnchor}>
               <Logo />
