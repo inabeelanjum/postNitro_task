@@ -36,7 +36,7 @@ const NavDropdown = ({ label, items, href }: NavDropdownProps) => {
         className={classes.navLink}
         rightSection={<CaretDown size={16} />}
         size="sm"
-        fw={700}
+        fw={600}
       >
         {label}
       </Button>
@@ -63,14 +63,14 @@ const NavDropdown = ({ label, items, href }: NavDropdownProps) => {
           size="sm"
           aria-haspopup="menu"
           aria-expanded={opened}
-          fw={700}
+          fw={600}
         >
           {label}
         </Button>
       </Menu.Target>
       
       <Menu.Dropdown>
-        <Stack gap="md" role="list">
+        <Stack gap={0} role="list">
           {items.map((item, index) => (
             <Menu.Item
               key={index}
@@ -78,10 +78,11 @@ const NavDropdown = ({ label, items, href }: NavDropdownProps) => {
               href={item.href}
               target={item.external ? '_blank' : undefined}
               role="listitem"
-              fw={700}
+              fw={500}
               c="black"
+              compact
             >
-              <Text size="sm" fw={700} c="black">{item.title}</Text>
+              <Text size="sm" fw={500} c="black">{item.title}</Text>
             </Menu.Item>
           ))}
         </Stack>

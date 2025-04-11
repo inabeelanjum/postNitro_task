@@ -82,6 +82,7 @@ const Navigation = () => {
                 variant="subtle"
                 size="sm"
                 className={classes.navLink}
+                fw={600}
               >
                 {t('plans')}
               </Button>
@@ -89,11 +90,13 @@ const Navigation = () => {
           </Group>
           
           {/* Right side elements */}
-          <Group>
+          <Group className={classes.rightGroup}>
             {/* Desktop only - Language Switcher and Buttons */}
-            <Group className={classes.desktopNav}>
+            <Group className={classes.desktopNav} gap="xs">
               {/* Language Switcher */}
-              <LanguageSwitcher />
+              <div className={classes.languageSwitcher}>
+                <LanguageSwitcher />
+              </div>
               
               {/* Create Image Post Button */}
               <Button
@@ -101,13 +104,12 @@ const Navigation = () => {
                 href="/app/post-maker"
                 variant="outline"
                 size="sm"
-                leftSection={<Sparkle size={18} />}
+                leftSection={<Sparkle size={16} />}
                 className={classes.createImageBtn}
+                radius="md"
               >
-                {common('buttons.create_image_post')} 
-                <span className={classes.betaBadge}>
-                  {common('labels.beta')}
-                </span>
+                {common('buttons.create_image_post')}
+                <span className={classes.betaBadge}>BETA</span>
               </Button>
               
               {/* Create Carousel Button */}
@@ -115,8 +117,9 @@ const Navigation = () => {
                 component={Link}
                 href="/app/carousel-maker"
                 size="sm"
-                leftSection={<Sparkle size={18} />}
+                leftSection={<Sparkle size={16} />}
                 className={classes.createBtn}
+                radius="md"
               >
                 {common('buttons.create_carousel')}
               </Button>

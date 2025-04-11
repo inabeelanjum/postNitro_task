@@ -32,7 +32,8 @@
 }
 
 .navLink {
-  font-weight: 700;
+  font-weight: 600;
+  font-size: 18px;
   text-transform: none;
   padding: 0 var(--mantine-spacing-xs);
   color: black;
@@ -44,19 +45,21 @@
 }
 
 .betaBadge {
-  background: linear-gradient(105deg, #087a68 0%, #066553 100%);
+  background: linear-gradient(105deg, #38d9a9 0%, #a9e34b 100%);
   color: white;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 600;
-  padding: 0 var(--mantine-spacing-xs);
-  border-radius: var(--mantine-radius-sm);
-  margin-left: var(--mantine-spacing-xs);
+  padding: 3px 8px;
+  border-radius: 12px;
+  margin-left: 6px;
   display: inline-block;
 }
 
 .createImageBtn {
   border-color: #087a68;
   color: #087a68;
+  border-width: 1px;
+  font-weight: 500;
 }
 
 .createImageBtn:hover {
@@ -68,6 +71,7 @@
 .createBtn {
   background-color: #087a68;
   color: white;
+  font-weight: 500;
 }
 
 .createBtn:hover {
@@ -90,7 +94,7 @@
 .rightGroup {
   display: flex;
   align-items: center;
-  gap: var(--mantine-spacing-xs);
+  gap: 8px;
 }
 
 /* Show mobile nav on mobile devices */
@@ -180,7 +184,13 @@
 .languageSwitcher {
   display: flex;
   align-items: center;
-  margin-right: 8px;
+  justify-content: center;
+  margin-right: 4px;
+  background-color: #E2E3E6;
+  padding: 1px;
+  border-radius: 8px;
+  width: 46px;
+  height: 36px;
 }
 
 .langButton {
@@ -190,6 +200,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: 3px;
 }
 
 /* Add language switcher to mobile menu */
